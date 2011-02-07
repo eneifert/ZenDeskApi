@@ -1,0 +1,6 @@
+<Modules>
+  <Module PersistentId="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA" ModuleId="ZenDeskApi" />
+  <Module PersistentId="2B27217E-7D59-4305-B267-395399ABA741" ModuleId="ZenDeskTests" />
+  <Module PersistentId="d:Miscellaneous Files" ModuleId="RestSharp" />
+  <Module PersistentId="RestSharp, Version=100.0.0.0, Culture=neutral" ModuleId="RestSharp_1" />
+</Modules>
