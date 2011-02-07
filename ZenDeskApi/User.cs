@@ -12,7 +12,7 @@ using ZenDeskApi.XmlSerializers;
 
 namespace ZenDeskApi
 {
-    public partial class ZenDeskApi
+    public partial class ZenDeskApi 
     {
         private const string Users = "users";
 

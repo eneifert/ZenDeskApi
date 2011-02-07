@@ -8,7 +8,7 @@ using ZenDeskApi.XmlSerializers;
 
 namespace ZenDeskApi
 {
-    public partial class ZenDeskApi
+    public partial class ZenDeskApi 
     {
         private string _forums = "forums";
 
