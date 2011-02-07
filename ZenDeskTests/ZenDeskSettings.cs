@@ -12,6 +12,5 @@ namespace ZenDeskTests
         public const string EndUserEmail = "sample end user email";
         public const string Password = "password";
         public const string TwitterName = "yourtwittername";
-
     }
 }

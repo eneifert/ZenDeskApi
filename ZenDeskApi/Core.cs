@@ -8,10 +8,11 @@ using System.Xml;
 using Newtonsoft.Json;
 using RestSharp;
 using RestSharp.Contrib;
+using ZenDeskApi.Model;
 
 
 namespace ZenDeskApi
-{   
+{
     public partial class ZenDeskApi
     {
         private const string  XOnBehalfOfEmail = "X-On-Behalf-Of";
