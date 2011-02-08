@@ -76,8 +76,7 @@ namespace ZenDeskApi
             var request = new ZenRestRequest
                               {
                                   Method = Method.POST,
-                                  Resource = _forums + ".xml",
-                                  XmlSerializer = new ZenDeskXmlSerializer()
+                                  Resource = _forums + ".xml"
                               };
             request.AddBody(forum);
 

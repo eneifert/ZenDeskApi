@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using RestSharp;
 using ZenDeskApi.Model;
+using ZenDeskApi.XmlSerializers;
 
 namespace ZenDeskApi
 {
@@ -26,7 +27,7 @@ namespace ZenDeskApi
                 Resource = string.Format("{0}/{1}.json", Tickets, id)
             };
 
-            return Execute<Ticket>(request); 
+            return Execute<Ticket>(request);
         }
 
         public List<Ticket> GetAllTicketsForUser(string email)
@@ -54,7 +55,7 @@ namespace ZenDeskApi
             return tickets;
         }
 
-        public List<Ticket> GetTicketsForUserByPage(string email, int page=1)
+        public List<Ticket> GetTicketsForUserByPage(string email, int page = 1)
         {
             var request = new ZenRestRequest
             {
@@ -77,7 +78,7 @@ namespace ZenDeskApi
             return ticktes;
         }
 
-        public List<Ticket> GetTicketsInViewByPage(int viewId, int page=1)
+        public List<Ticket> GetTicketsInViewByPage(int viewId, int page = 1)
         {
             var request = new ZenRestRequest
             {
@@ -91,7 +92,7 @@ namespace ZenDeskApi
         }
 
         public List<Ticket> GetAllTicketsInView(int viewId)
-        {          
+        {
             var tickets = new List<Ticket>();
 
             try
@@ -100,24 +101,119 @@ namespace ZenDeskApi
                 var ticks = new List<Ticket>();
 
                 //Try getting the tickets for all of the pages
-                while(page == 1 || ticks.Count > 0)
+                while (page == 1 || ticks.Count > 0)
                 {
-                    ticks = GetTicketsInViewByPage(viewId, page);                                        
+                    ticks = GetTicketsInViewByPage(viewId, page);
                     tickets.AddRange(ticks);
 
                     page++;
                 }
             }
             //There were no more pages so just go on
-            catch(ArgumentNullException ex)
+            catch (ArgumentNullException ex)
             { }
 
-            return tickets;            
+            return tickets;
+        }
+
+        public int CreateTicket(string description, int requesterId, TicketPriorities priority, string setTags, List<TicketFieldEntry> ticketFields = null)
+        {
+            return
+                CreateTicket(new Ticket
+                                 {
+                                     Description = description,
+                                     RequesterId = requesterId,
+                                     PriorityId = (int)priority,
+                                     SetTags = setTags,
+                                     TicketFieldEntries = ticketFields
+                                 });
+        }
+
+        public int CreateTicket(Ticket ticket)
+        {
+            var request = new ZenRestRequest
+            {
+                Method = Method.POST,
+                Resource = Tickets + ".xml"
+            };
+
+            request.AddBody(ticket);
+
+            var res = Execute(request);
+            return GetIdFromLocationHeader(res);
+        }
+
+        /// <summary>
+        /// Creates a new ticket AND creates a new user as the tickets requester, IF the user does not already exist (based on the requester email). 
+        /// If the requester exists, no user is created and the ticket is created with the existing user as requester
+        /// </summary>
+        /// <param name="description"></param>
+        /// <param name="priority"></param>
+        /// <param name="requesterName"></param>
+        /// <param name="requesterEmail"></param>
+        /// <returns></returns>
+        public int CreateTicketWithRequester(string description, TicketPriorities priority, string requesterName, string requesterEmail)
+        {
+            return
+                CreateTicketWithRequester(new Ticket
+                                              {
+                                                  Description = description,
+                                                  PriorityId = (int)priority,
+                                                  RequesterName = requesterName,
+                                                  RequesterEmail = requesterEmail
+                                              });
+        }
+
+        /// <summary>
+        /// Creates a new ticket AND creates a new user as the tickets requester, IF the user does not already exist (based on the requester email). 
+        /// If the requester exists, no user is created and the ticket is created with the existing user as requester
+        /// </summary>
+        /// <param name="ticket"></param>
+        /// <returns></returns>
+        public int CreateTicketWithRequester(Ticket ticket)
+        {
+            var request = new ZenRestRequest
+            {
+                Method = Method.POST,
+                Resource = Tickets + ".xml"
+            };
+
+            request.AddBody(ticket);
+
+            var res = Execute(request);
+            return GetIdFromLocationHeader(res);
+        }       
+        
+        public bool AddComment(int ticketId, Comment comment)
+        {
+            var request = new ZenRestRequest
+            {
+                Method = Method.PUT,
+                Resource = string.Format("{0}/{1}.xml", Tickets, ticketId)
+            };
+            request.AddBody(comment);
+
+            var res = Execute(request);
+
+            return res.StatusCode == System.Net.HttpStatusCode.OK;
+        }
+
+        public bool DestroyTicket(int ticketId)
+        {
+            var request = new ZenRestRequest
+                              {
+                                  Method = Method.DELETE,
+                                  Resource = string.Format("{0}/{1}.xml", Tickets, ticketId.ToString())
+                              };
+
+            var res = Execute(request);
+
+            return res.StatusCode == System.Net.HttpStatusCode.OK;
         }
 
         public int CreateTicketAsEndUser(string endUserEmail, string subject, string description)
         {
-            return CreateTicketAsEndUser(endUserEmail, new Ticket {Subject = subject, Description = description});
+            return CreateTicketAsEndUser(endUserEmail, new Ticket { Subject = subject, Description = description });
         }
 
         public int CreateTicketAsEndUser(string endUserEmail, Ticket ticket)
@@ -137,19 +233,19 @@ namespace ZenDeskApi
             return GetIdFromLocationHeader(res);
         }
 
-        public bool UpdateTicket(int ticketId, string description)
+        public bool UpdateTicketAsEndUser(int ticketId, string description)
         {
-            return UpdateTicket(ticketId, new Comment {Value = description});
+            return UpdateTicketAsEndUser(ticketId, new Comment { Value = description });
         }
 
-        public bool UpdateTicket(int ticketId, Comment comment)        
+        public bool UpdateTicketAsEndUser(int ticketId, Comment comment)
         {
             string email = GetUserById(GetTicketById(ticketId).RequesterId).Email;
 
             var request = new ZenRestRequest
-            { 
-                Method = Method.PUT, 
-                Resource = string.Format("{0}/{1}.xml", Requests, ticketId.ToString())                
+            {
+                Method = Method.PUT,
+                Resource = string.Format("{0}/{1}.xml", Requests, ticketId.ToString())
             };
 
             request.AddHeader(XOnBehalfOfEmail, email);
@@ -162,12 +258,12 @@ namespace ZenDeskApi
             return res.StatusCode == System.Net.HttpStatusCode.OK;
         }
 
-        public bool DestroyTicket(int ticketId)
-        {         
+        public bool DestroyRequest(int requestId)
+        {
             var request = new ZenRestRequest
             {
                 Method = Method.DELETE,
-                Resource = string.Format("{0}/{1}.xml", Requests, ticketId.ToString())  
+                Resource = string.Format("{0}/{1}.xml", Requests, requestId.ToString())
             };
 
             var res = Execute(request);

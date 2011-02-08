@@ -63,13 +63,16 @@ namespace ZenDeskApi.Model
         [ZenDeskSerializeAs(Name = "updated-at")]
         public string UpdatedAt { get; set; }
 
-        [ZenDeskSerializeAs(Name = "via-id")]
+        [ZenDeskSerializeAs(Name = "via-id", Skip=true)]
         public int ViaId { get; set; }
+
+        [ZenDeskSerializeAs(Name="set-tags")]
+        public string SetTags { get; set; }
 
         [ZenDeskSerializeAs(Name = "current-tags")]
         public string CurrentTags { get; set; }
 
-        [ZenDeskSerializeAs(Name = "score")]
+        [ZenDeskSerializeAs(Name = "score", Skip=true)]
         public int Score { get; set; }
 
         [ZenDeskSerializeAs(Name = "comments")]
@@ -77,11 +80,33 @@ namespace ZenDeskApi.Model
 
         [ZenDeskSerializeAs(Name = "ticket-field-entries")]
         public List<TicketFieldEntry> TicketFieldEntries { get; set; }
+
+        /// <summary>
+        /// Note: This is only used for Creating tickets and this field is not returned for getting tickets
+        /// </summary>
+        [ZenDeskSerializeAs(Name = "requester-name")]        
+        public string RequesterName { get; set; }
+
+        /// <summary>
+        /// Note: This is only used for Creating tickets and this field is not returned for getting tickets
+        /// </summary>
+        [ZenDeskSerializeAs(Name = "requester-email")]        
+        public string RequesterEmail { get; set; }
+
+        /// <summary>
+        /// Note: This is only used for Updating tickets and this field is not returned for getting tickets
+        /// </summary>
+        [ZenDeskSerializeAs(Name = "additional-tags")]        
+        public string AdditionalTags { get; set; }
     }
 
+    [ZenDeskSerializeAs(Name = "ticket-field-entry")]
     public class TicketFieldEntry
     {
+        [ZenDeskSerializeAs(Name = "ticket-field-id")]
         public int TicketFieldId { get; set; }
+
+        [ZenDeskSerializeAs(Name = "value")]
         public bool Value { get; set; }
     }
 

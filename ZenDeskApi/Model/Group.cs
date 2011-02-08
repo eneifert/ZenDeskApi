@@ -31,7 +31,7 @@ namespace ZenDeskApi.Model
         [ZenDeskSerializeAs(Name = "agents", ListItemName="agent")]
         public List<int> UserIds { get; set; }
 
-        public void TransferUsersToUserIds()
+        public void CopyUsersToUserIds()
         {
 
             if (Users != null && Users.Count > 0)                

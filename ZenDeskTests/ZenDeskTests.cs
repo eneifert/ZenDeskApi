@@ -78,36 +78,68 @@ namespace ZenDeskTests
         //}
 
         //[Test]
+        //public void CanApplyMacro()
+        //{
+        //    int macroId = _api.GetMacros().Last().Id;
+        //    int ticketId = _api.GetTicketsForUserByPage(ZenDeskSettings.EndUserEmail).FirstOrDefault().NiceId;
+
+        //    Assert.True(_api.ApplyMacro(macroId, ticketId));
+        //}
+
+        //[Test]
+        //public void CanCreateTicketWithRequester()
+        //{
+        //    Assert.Greater(_api.CreateTicketWithRequester("test", TicketPriorities.Normal, "a name", ZenDeskSettings.EndUserEmail), 0);
+        //}
+
+        //[Test]
         //public void CanCreateUpdateAndDestroyTicket()
+        //{
+        //    int requesterId = (int)_api.FindUsersByEmail(ZenDeskSettings.EndUserEmail).First().Id;
+        //    int id = _api.CreateTicket("test", requesterId, TicketPriorities.Normal, "test");
+        //    Assert.Greater(id, 0);
+
+        //    Assert.True(_api.AddComment(id, new Comment { Value = "updated comment value" }));
+        //    var t2 = _api.GetTicketById(id);
+
+        //    Assert.AreEqual(t2.Comments.Last().Value, "updated comment value");
+
+        //    Assert.True(_api.DestroyTicket(id));
+        //}
+
+        //[Test]
+        //public void CanCreateUpdateAndDestroyTicketAsEndUser()
         //{
         //    int id = _api.CreateTicketAsEndUser(ZenDeskSettings.EndUserEmail, "I am testing", "still testing");
 
         //    Assert.Greater(id, 0);
 
         //    string desc = "updated comment value";
-        //    Assert.True(_api.UpdateTicket(id, desc));
+        //    Assert.True(_api.UpdateTicketAsEndUser(id, desc));
         //    var tick = _api.GetTicketById(id);
 
         //    Assert.AreEqual(tick.Comments.Last().Value, desc);
 
-        //    Assert.True(_api.DestroyTicket(id));
+        //    Assert.True(_api.DestroyRequest(id));
         //}
 
         //[Test]
         //public void CanCreateUpdateAndDestroyGroup()
         //{
         //    string name = "Test Api Group";
-        //    var gs = _api.GetGroups().Where(x => x.Name == "Support").First();
-        //    gs.TransferUsersToUserIds();
+        //    var gs = _api.GetGroups().First(x => x.Name == "Support");
 
-        //    int id = _api.CreateOrUpdateGroup(name, gs.UserIds);
-
+        //    int id = _api.CreateOrUpdateGroup(name, gs.Users.Select(x => (int)x.Id).ToList());
         //    Assert.Greater(id, 0);
 
         //    Group g = _api.GetGroupById(id);
+        //    g.Name = "Updated Test Api Group";
+        //    Assert.True(_api.UpdateGroup(g));
 
-        //    Assert.AreEqual(g.Users.Count, gs.UserIds.Count);
+        //    Group g2 = _api.GetGroupById(id);
+        //    Assert.AreEqual(g2.Name, g.Name);
 
+        //    Assert.AreEqual(g2.Users.Count, gs.Users.Count);
         //    Assert.True(_api.DestroyGroup(g.Id));
         //}
 
@@ -122,34 +154,32 @@ namespace ZenDeskTests
 
         //    Assert.Greater(id, 0);
 
-        //    string newSite = "www.yahoo.com";
-        //    _api.CreateOrUpdateOrganization(name, newSite);
+        //    var org = _api.GetOgranizationById(id);
+        //    org.Default = "www.yahoo.com";
+        //    _api.CreateOrUpdateOrganization(org);
 
-        //    Assert.AreEqual(_api.GetOgranizationById(id).Default, newSite);
+        //    Assert.AreEqual(_api.GetOgranizationById(id).Default, org.Default);
 
         //    Assert.True(_api.DestroyOrganization(id));
         //}
 
         //[Test]
-        //public void CanCreateAndDestroyAUser()
+        //public void CanCreateUpdateAndDestroyAUser()
         //{
         //    string email = "tsdestestss@test.com";
 
         //    int userID = _api.CreateOrUpdateUser(email, "some random name", "password", Role.EndUser,
         //                                         RestrictedTo.TicketsRequestedByUser, _api.GetAllGroupIDs());
-
         //    Assert.Greater(userID, 0);
+
+        //    var u = _api.GetUserById(userID);
+        //    u.Phone = "342098329342908";
+
+        //    Assert.True(_api.UpdateUser(u));
+        //    var u2 = _api.GetUserById(userID);
+        //    Assert.AreEqual(u2.Phone, u.Phone);
+
         //    Assert.True(_api.DestroyUser(userID));
-        //}
-
-        //[Test]
-        //public void CanUpdateUser()
-        //{
-
-        //    User u = _api.QueryUsers(ZenDeskSettings.Email).First();
-        //    u.Phone = "55553211";
-
-        //    Assert.AreEqual(_api.QueryUsers(ZenDeskSettings.Email).First().Phone, u.Phone);
         //}
 
         //[Test]
@@ -179,7 +209,6 @@ namespace ZenDeskTests
 
         //}
         #endregion
-
   
         [Test]
         public void CanGetUsers()
@@ -299,15 +328,5 @@ namespace ZenDeskTests
         {
             Assert.Greater(_api.GetMacros().Count, 0);
         }
-
-        [Test]
-        public void CanApplyMacro()
-        {
-            int macroId = _api.GetMacros().Last().Id;
-            int ticketId = _api.GetTicketsForUserByPage(ZenDeskSettings.EndUserEmail).FirstOrDefault().NiceId;
-
-            Assert.True(_api.ApplyMacro(macroId, ticketId));
-        }
-
     }
 }

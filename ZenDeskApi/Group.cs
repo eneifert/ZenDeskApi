@@ -52,7 +52,7 @@ namespace ZenDeskApi
             }
 
             //Make sure to use the UserIds not the Users
-            group.TransferUsersToUserIds();       
+            group.CopyUsersToUserIds();       
 
             var request = new ZenRestRequest
             {
@@ -71,7 +71,7 @@ namespace ZenDeskApi
         public bool UpdateGroup(Group group)
         {
             //Make sure to use the UserIds not the Users
-            group.TransferUsersToUserIds();
+            group.CopyUsersToUserIds();
 
             var request = new ZenRestRequest
             {
