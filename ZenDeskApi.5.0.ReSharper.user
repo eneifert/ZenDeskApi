@@ -8,65 +8,68 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:Forum.cs" caret="477" fromTop="14" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:Entry.cs" caret="752" fromTop="20" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Class1.cs" caret="5241" fromTop="0" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Entry.cs" caret="0" fromTop="0" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Forum.cs" caret="0" fromTop="0" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:UserIdentity.cs" caret="686" fromTop="18" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:XmlSerializers/f:ZenDeskXmlSerializer.cs" caret="5185" fromTop="35" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:User.cs" caret="428" fromTop="10" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:Group.cs" caret="1176" fromTop="27" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Group.cs" caret="1169" fromTop="12" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:Organization.cs" caret="161" fromTop="7" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:XmlSerializers/f:ZendDeskSerializeAsAttribute.cs" caret="0" fromTop="0" />
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:View.cs" caret="757" fromTop="24" />
-      <File id="d:Miscellaneous Files/f:XmlDeserializer.cs/l:C!?Users?ericn?Documents?Visual Studio 2010?Projects?RestSharp?RestSharp?Deserializers?XmlDeserializer.cs" caret="1740" fromTop="23" />
-      <File id="d:Miscellaneous Files/f:JsonDeserializer.cs/l:C!?Users?ericn?Documents?Visual Studio 2010?Projects?RestSharp?RestSharp?Deserializers?JsonDeserializer.cs" caret="778" fromTop="6" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:Comment.cs" caret="797" fromTop="26" />
-      <File id="d:Miscellaneous Files/f:RestClient.cs/l:C!?Users?ericn?Documents?Visual Studio 2010?Projects?RestSharp?RestSharp?RestClient.cs" caret="13360" fromTop="24" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:Ticket.cs" caret="195" fromTop="7" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:View.cs" caret="584" fromTop="23" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Organization.cs" caret="669" fromTop="24" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:User.cs" caret="4138" fromTop="24" />
-      <File id="d:Miscellaneous Files/f:RestClient.Sync.cs/l:C!?Users?ericn?Documents?Visual Studio 2010?Projects?RestSharp?RestSharp?RestClient.Sync.cs" caret="1320" fromTop="22" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:ZenRestRequest.cs" caret="0" fromTop="0" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Core.cs" caret="372" fromTop="15" />
-      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="5599" fromTop="36" />
-      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskSettings.cs" caret="346" fromTop="10" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Ticket.cs" caret="3778" fromTop="24" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:UserIdentity.cs" caret="686" fromTop="18" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:Tag.cs" caret="237" fromTop="9" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:Organization.cs" caret="0" fromTop="0" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:Forum.cs" caret="925" fromTop="31" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:Entry.cs" caret="785" fromTop="28" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:Post.cs" caret="406" fromTop="14" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:TicketField.cs" caret="134" fromTop="6" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:Macro.cs" caret="286" fromTop="10" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:TicketField.cs" caret="177" fromTop="7" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Macro.cs" caret="195" fromTop="8" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Tag.cs" caret="195" fromTop="8" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:View.cs" caret="195" fromTop="8" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Organization.cs" caret="195" fromTop="8" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:User.cs" caret="0" fromTop="0" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:User.cs" caret="1753" fromTop="18" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:Comment.cs" caret="218" fromTop="8" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:Ticket.cs" caret="2367" fromTop="20" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:ZenRestRequest.cs" caret="221" fromTop="9" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:Attachment.cs" caret="0" fromTop="0" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Forum.cs" caret="2217" fromTop="45" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:Group.cs" caret="1014" fromTop="23" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Group.cs" caret="2329" fromTop="23" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:EntriesAndPosts.cs" caret="1652" fromTop="0" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskSettings.cs" caret="457" fromTop="12" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Core.cs" caret="1038" fromTop="24" />
+      <File id="d:Miscellaneous Files/f:RestClient.Sync.cs/l:C!?Users?ericn?Documents?Visual Studio 2010?Projects?RestSharp?RestSharp?RestClient.Sync.cs" caret="2053" fromTop="25" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Ticket.cs" caret="1016" fromTop="0" />
+      <File id="d:Miscellaneous Files/f:RestClient.cs/l:C!?Users?ericn?Documents?Visual Studio 2010?Projects?RestSharp?RestSharp?RestClient.cs" caret="13331" fromTop="76" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="8592" fromTop="25" />
     </RecentFiles>
     <RecentEdits>
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:View.cs" caret="534" fromTop="22" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:View.cs" caret="584" fromTop="23" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Ticket.cs" caret="2892" fromTop="44" />
-      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="5244" fromTop="44" />
-      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="5187" fromTop="42" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Ticket.cs" caret="1915" fromTop="32" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Ticket.cs" caret="2868" fromTop="28" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Ticket.cs" caret="2686" fromTop="36" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Ticket.cs" caret="2807" fromTop="42" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Ticket.cs" caret="1661" fromTop="4" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Ticket.cs" caret="2353" fromTop="29" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Ticket.cs" caret="2502" fromTop="33" />
-      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="4780" fromTop="22" />
-      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="4656" fromTop="15" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Ticket.cs" caret="3814" fromTop="40" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Ticket.cs" caret="3253" fromTop="26" />
-      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskSettings.cs" caret="342" fromTop="10" />
-      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="4790" fromTop="15" />
-      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="5632" fromTop="30" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:Ticket.cs" caret="195" fromTop="7" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Core.cs" caret="919" fromTop="32" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Ticket.cs" caret="1108" fromTop="28" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Core.cs" caret="758" fromTop="25" />
-      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="4937" fromTop="30" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Core.cs" caret="373" fromTop="15" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Ticket.cs" caret="1212" fromTop="6" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Ticket.cs" caret="2925" fromTop="20" />
-      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="5616" fromTop="36" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Ticket.cs" caret="3383" fromTop="15" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Ticket.cs" caret="3495" fromTop="19" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Ticket.cs" caret="6550" fromTop="44" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Ticket.cs" caret="6550" fromTop="22" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:Ticket.cs" caret="2127" fromTop="25" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Ticket.cs" caret="6550" fromTop="30" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Ticket.cs" caret="6550" fromTop="12" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Ticket.cs" caret="6543" fromTop="1" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Forum.cs" caret="2292" fromTop="22" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="10421" fromTop="7" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="7400" fromTop="23" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="7400" fromTop="41" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="7400" fromTop="28" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="6819" fromTop="13" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="6819" fromTop="21" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="6819" fromTop="19" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="6819" fromTop="21" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="6819" fromTop="15" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="6819" fromTop="21" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="6819" fromTop="35" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:Group.cs" caret="1012" fromTop="23" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="6819" fromTop="16" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="6819" fromTop="21" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="6819" fromTop="15" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="6819" fromTop="21" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="6819" fromTop="28" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="6819" fromTop="31" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="6819" fromTop="16" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="7423" fromTop="15" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskSettings.cs" caret="168" fromTop="8" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskSettings.cs" caret="457" fromTop="12" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="8967" fromTop="41" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>

@@ -4,8 +4,10 @@ This is a full c# wrapper for the ZenDesk Api at: http://www.zendesk.com/api/res
 
 Don't be afraid to fix any bugs you see and send me pull requests!
 
-Here is a list of the public methods, enjoy.
+*Update - just added Sso support method: 
+static string GetLoginUrl(string authToken, string httpsUrl, string name, string email, string returnToUrl = "")
 
+Here is a list of the public methods, enjoy.
 
     bool AddEmailAddressToAUser(int userId, string email);
     bool AddTwitterHandleToUser(int userId, string twitterHandle);
