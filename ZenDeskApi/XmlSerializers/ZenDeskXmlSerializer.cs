@@ -17,6 +17,7 @@
 using System;
 using System.Collections;
 using System.Linq;
+using System.Reflection;
 using System.Xml.Linq;
 using RestSharp.Extensions;
 using RestSharp.Serializers;
@@ -153,7 +154,13 @@ namespace ZenDeskApi.XmlSerializers
                         {
                             if (itemTypeName == "")
                             {
-                                itemTypeName = item.GetType().Name;
+                                Type itemType = item.GetType();
+                                var att = itemType.GetAttribute<ZenDeskSerializeAsAttribute>();
+
+                                if (att != null && att.Name != null)
+                                    itemTypeName = att.Name;
+                                else                                                    
+                                    itemTypeName = item.GetType().Name;
                             }
                             var instance = new XElement(itemTypeName);
                             Map(instance, item);

@@ -12,7 +12,7 @@ namespace ZenDeskApi.Model
         [ZenDeskSerializeAs(Name = "content-type")]
         public string ContentType { get; set; }
 
-        [ZenDeskSerializeAs(Name = "created-at")]
+        [ZenDeskSerializeAs(Name = "created-at", Skip=true)]
         public string CreatedAt { get; set; }
 
         [ZenDeskSerializeAs(Name = "filename")]

@@ -233,6 +233,29 @@ namespace ZenDeskApi
             return GetIdFromLocationHeader(res);
         }
 
+        /// <summary>
+        /// To update custom ticket fields just add them to the ticket's TicketFieldEntries.
+        /// Use GetTicketFields and then manually search to find the one you want to update.
+        /// Note you can't add comments this way. Call AddComments to do that.
+        /// </summary>
+        /// <param name="ticket"></param>
+        /// <returns></returns>
+        public bool UpdateTicket(Ticket ticket)
+        {
+            ticket.Comments.Clear();
+            var request = new ZenRestRequest
+            {
+                Method = Method.PUT,
+                Resource = string.Format("{0}/{1}.xml", Tickets, ticket.NiceId.ToString())
+            };
+
+            request.AddBody(ticket);
+            
+            var res = Execute(request);
+
+            return res.StatusCode == System.Net.HttpStatusCode.OK;
+        }
+
         public bool UpdateTicketAsEndUser(int ticketId, string description)
         {
             return UpdateTicketAsEndUser(ticketId, new Comment { Value = description });

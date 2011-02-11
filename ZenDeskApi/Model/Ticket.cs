@@ -9,16 +9,16 @@ namespace ZenDeskApi.Model
     [ZenDeskSerializeAs(Name = "ticket")]
     public class Ticket
     {                
-        [ZenDeskSerializeAs(Name = "assigned-at")]
+        [ZenDeskSerializeAs(Name = "assigned-at", Skip=true)]
         public string AssignedAt { get; set; }
 
         [ZenDeskSerializeAs(Name = "assignee-id")]
         public string AssigneeId { get; set; }
 
-        [ZenDeskSerializeAs(Name = "assignee-updated-at")]
+        [ZenDeskSerializeAs(Name = "assignee-updated-at", Skip = true)]
         public string AssigneeUpdatedAt { get; set; }
 
-        [ZenDeskSerializeAs(Name = "created-at")]
+        [ZenDeskSerializeAs(Name = "created-at", Skip = true)]
         public string CreatedAt { get; set; }
 
         [ZenDeskSerializeAs(Name = "subject")]
@@ -48,19 +48,19 @@ namespace ZenDeskApi.Model
         [ZenDeskSerializeAs(Name = "status-id")]
         public int StatusId { get; set; }
 
-        [ZenDeskSerializeAs(Name = "status-updated-at")]
+        [ZenDeskSerializeAs(Name = "status-updated-at", Skip = true)]
         public string StatusUpdatedAt { get; set; }
 
         [ZenDeskSerializeAs(Name = "requester-id")]
         public int RequesterId { get; set; }
 
-        [ZenDeskSerializeAs(Name = "requester-updated-at")]
+        [ZenDeskSerializeAs(Name = "requester-updated-at", Skip = true)]
         public string RequesterUpdatedAt { get; set; }
 
         [ZenDeskSerializeAs(Name = "ticket-type")]
         public string TicketType { get; set; }
 
-        [ZenDeskSerializeAs(Name = "updated-at")]
+        [ZenDeskSerializeAs(Name = "updated-at", Skip = true)]
         public string UpdatedAt { get; set; }
 
         [ZenDeskSerializeAs(Name = "via-id", Skip=true)]
@@ -107,7 +107,7 @@ namespace ZenDeskApi.Model
         public int TicketFieldId { get; set; }
 
         [ZenDeskSerializeAs(Name = "value")]
-        public bool Value { get; set; }
+        public string Value { get; set; }
     }
 
     public enum TicketStatus

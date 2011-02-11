@@ -99,6 +99,12 @@ namespace ZenDeskTests
         //    int id = _api.CreateTicket("test", requesterId, TicketPriorities.Normal, "test");
         //    Assert.Greater(id, 0);
 
+        //    ////It's not really clear how to test anyone else's ticket fields but mine so this is commented out.
+        //    //var t1 = _api.GetTicketById(id);
+        //    //t1.TicketFieldEntries.Add(new TicketFieldEntry { TicketFieldId = 457336, Value = "4323234" });
+
+        //    //Assert.True(_api.UpdateTicket(t1));
+
         //    Assert.True(_api.AddComment(id, new Comment { Value = "updated comment value" }));
         //    var t2 = _api.GetTicketById(id);
 
@@ -214,7 +220,7 @@ namespace ZenDeskTests
         public void CanGetUsers()
         {          
             List<User> users = _api.GetUsers();
-
+            
             Assert.Greater(users.Count, 0);
         }
 

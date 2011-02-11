@@ -12,7 +12,7 @@ namespace ZenDeskApi.Model
         [ZenDeskSerializeAs(Name = "author-id")]
         public int AuthorId { get; set; }
 
-        [ZenDeskSerializeAs(Name = "created-at")]
+        [ZenDeskSerializeAs(Name = "created-at", Skip=true)]
         public string CreatedAt { get; set; }
 
         [ZenDeskSerializeAs(Name = "is-public")]

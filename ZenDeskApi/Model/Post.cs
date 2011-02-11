@@ -12,10 +12,10 @@ namespace ZenDeskApi.Model
         [ZenDeskSerializeAs(Name = "user-id")]
         public int UserId { get; set; }
         
-        [ZenDeskSerializeAs(Name = "created-at")]
+        [ZenDeskSerializeAs(Name = "created-at", Skip=true)]
         public string CreatedAt { get; set; }
         
-        [ZenDeskSerializeAs(Name = "updated-at")]
+        [ZenDeskSerializeAs(Name = "updated-at", Skip=true)]
         public string UpdatedAt { get; set; }
         
         [ZenDeskSerializeAs(Name = "body")]

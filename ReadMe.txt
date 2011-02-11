@@ -84,5 +84,6 @@ Here is a list of the public methods, enjoy.
     bool UpdatePost(Post post);
     bool UpdateGroup(Group group);
     bool UpdateUser(User user);
+    bool UpdateTicket(Ticket ticket)
     bool UpdateTicket(int ticketId, string description);
     bool UpdateTicket(int ticketId, Comment comment);
