@@ -8,9 +8,10 @@ namespace ZenDeskTests
     public class ZenDeskSettings
     {
         public const string Site = "http://yoursite.zendesk.com";
-        public const string Email = "youremail";
-        public const string EndUserEmail = "sample end user email";
+        public const string Email = "emailaddress";
+        public const string EndUserEmail = "enduseremail";
         public const string Password = "password";
-        public const string TwitterName = "yourtwittername";        
+        public const string TwitterName = "yourtwittername";
+        public const int CustomFieldId = 457336;
     }
 }

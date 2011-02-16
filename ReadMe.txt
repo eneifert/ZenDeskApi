@@ -1,3 +1,5 @@
+*Updated 2/16/2011: Fixed bug changed the TicketStatus to TicketStatusID.
+
 This is a full c# wrapper for the ZenDesk Api at: http://www.zendesk.com/api/rest-introduction.
 
 *Note: Create and Update methods might have some unexpected behavior. It was never clear what fields could and could not be updated. So if you get an error it is probably because you are sending them to much data. I have already began a discussion about this issue which can be seen here: https://support.zendesk.com/requests/76352

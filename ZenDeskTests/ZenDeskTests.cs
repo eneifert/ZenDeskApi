@@ -95,13 +95,14 @@ namespace ZenDeskTests
         //[Test]
         //public void CanCreateUpdateAndDestroyTicket()
         //{
+
         //    int requesterId = (int)_api.FindUsersByEmail(ZenDeskSettings.EndUserEmail).First().Id;
         //    int id = _api.CreateTicket("test", requesterId, TicketPriorities.Normal, "test");
         //    Assert.Greater(id, 0);
 
         //    ////It's not really clear how to test anyone else's ticket fields but mine so this is commented out.
         //    //var t1 = _api.GetTicketById(id);
-        //    //t1.TicketFieldEntries.Add(new TicketFieldEntry { TicketFieldId = 457336, Value = "4323234" });
+        //    //t1.TicketFieldEntries.Add(new TicketFieldEntry { TicketFieldId = ZenDeskSettings.CustomFieldId, Value = "4323234" });
 
         //    //Assert.True(_api.UpdateTicket(t1));
 
@@ -111,6 +112,28 @@ namespace ZenDeskTests
         //    Assert.AreEqual(t2.Comments.Last().Value, "updated comment value");
 
         //    Assert.True(_api.DestroyTicket(id));
+        //}
+
+        //[Test]
+        //public void CanCreateATicketWithMoreFields()
+        //{
+        //    var ticketFieldEntries = new List<TicketFieldEntry>();
+        //    ticketFieldEntries.Add(new TicketFieldEntry { TicketFieldId = ZenDeskSettings.CustomFieldId, Value = "555-555-5555" });
+
+        //    //Create a new SR Ticket using ZenDesk
+        //    var ticket = new ZenDeskApi.Model.Ticket
+        //    {
+        //        RequesterEmail = "somenewemail@sample.com",
+        //        TicketFieldEntries = ticketFieldEntries,
+        //        Description = "Hello world \n this is a ticket!",
+        //        RequesterName = string.Format("{0} {1}", "John", "Smith"),
+        //        SetTags = "Colorodo",
+        //        Subject = "Promotion",
+        //        TicketTypeId = (int)TicketType.Question,
+        //    };
+        //    int resId = _api.CreateTicket(ticket);
+            
+        //    Assert.Greater(resId, 0);
         //}
 
         //[Test]
@@ -267,7 +290,7 @@ namespace ZenDeskTests
 
         [Test]
         public void CanGetATicket()
-        {
+        {            
             Ticket t = _api.GetTicketById(1);
 
             Assert.Greater(t.Comments.Count, 0);

@@ -57,8 +57,8 @@ namespace ZenDeskApi.Model
         [ZenDeskSerializeAs(Name = "requester-updated-at", Skip = true)]
         public string RequesterUpdatedAt { get; set; }
 
-        [ZenDeskSerializeAs(Name = "ticket-type")]
-        public string TicketType { get; set; }
+        [ZenDeskSerializeAs(Name = "ticket-type-id")]
+        public int TicketTypeId { get; set; }
 
         [ZenDeskSerializeAs(Name = "updated-at", Skip = true)]
         public string UpdatedAt { get; set; }
