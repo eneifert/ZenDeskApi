@@ -6,23 +6,23 @@ using ZenDeskApi.XmlSerializers;
 
 namespace ZenDeskApi.Model
 {
-    [ZenDeskSerializeAs(Name = "organization")]
+    [ZenDeskSerialization(Name = "organization")]
     public class Organization
     {
 
-        [ZenDeskSerializeAs(Name = "id")]
+        [ZenDeskSerialization(Name = "id")]
         public int Id { get; set; }
 
-        [ZenDeskSerializeAs(Name = "name")]
+        [ZenDeskSerialization(Name = "name")]
         public string Name { get; set; }
 
-        [ZenDeskSerializeAs(Name = "is-shared")]
+        [ZenDeskSerialization(Name = "is-shared")]
         public bool IsShared { get; set; }
 
-        [ZenDeskSerializeAs(Name = "default")]
+        [ZenDeskSerialization(Name = "default")]
         public string Default { get; set; }
 
-        [ZenDeskSerializeAs(Name = "users")]
+        [ZenDeskSerialization(Name = "users")]
         public List<User> Users { get; set; }
     }
 }

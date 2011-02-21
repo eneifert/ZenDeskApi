@@ -6,107 +6,107 @@ using ZenDeskApi.XmlSerializers;
 
 namespace ZenDeskApi.Model
 {
-    [ZenDeskSerializeAs(Name = "ticket")]
+    [ZenDeskSerialization(Name = "ticket")]
     public class Ticket
     {                
-        [ZenDeskSerializeAs(Name = "assigned-at", Skip=true)]
+        [ZenDeskSerialization(Name = "assigned-at", Skip=true)]
         public string AssignedAt { get; set; }
 
-        [ZenDeskSerializeAs(Name = "assignee-id")]
+        [ZenDeskSerialization(Name = "assignee-id")]
         public string AssigneeId { get; set; }
 
-        [ZenDeskSerializeAs(Name = "assignee-updated-at", Skip = true)]
+        [ZenDeskSerialization(Name = "assignee-updated-at", Skip = true)]
         public string AssigneeUpdatedAt { get; set; }
 
-        [ZenDeskSerializeAs(Name = "created-at", Skip = true)]
+        [ZenDeskSerialization(Name = "created-at", Skip = true)]
         public string CreatedAt { get; set; }
 
-        [ZenDeskSerializeAs(Name = "subject")]
+        [ZenDeskSerialization(Name = "subject")]
         public string Subject { get; set; }
 
-        [ZenDeskSerializeAs(Name = "description")]
+        [ZenDeskSerialization(Name = "description")]
         public string Description { get; set; }
 
-        [ZenDeskSerializeAs(Name = "external-id")]
+        [ZenDeskSerialization(Name = "external-id")]
         public int? ExternalId { get; set; }
 
-        [ZenDeskSerializeAs(Name = "group-id")]
+        [ZenDeskSerialization(Name = "group-id")]
         public int? GroupId { get; set; }
 
-        [ZenDeskSerializeAs(Name = "id")]
+        [ZenDeskSerialization(Name = "id")]
         public int NiceId { get; set; }
 
-        [ZenDeskSerializeAs(Name = "linked-id")]
+        [ZenDeskSerialization(Name = "linked-id")]
         public int? LinkedId { get; set; }
 
-        [ZenDeskSerializeAs(Name = "priority-id")]
+        [ZenDeskSerialization(Name = "priority-id")]
         public int PriorityId { get; set; }
 
-        [ZenDeskSerializeAs(Name = "submitter-id")]
+        [ZenDeskSerialization(Name = "submitter-id")]
         public int SubmitterId { get; set; }
 
-        [ZenDeskSerializeAs(Name = "status-id")]
+        [ZenDeskSerialization(Name = "status-id")]
         public int StatusId { get; set; }
 
-        [ZenDeskSerializeAs(Name = "status-updated-at", Skip = true)]
+        [ZenDeskSerialization(Name = "status-updated-at", Skip = true)]
         public string StatusUpdatedAt { get; set; }
 
-        [ZenDeskSerializeAs(Name = "requester-id")]
+        [ZenDeskSerialization(Name = "requester-id")]
         public int RequesterId { get; set; }
 
-        [ZenDeskSerializeAs(Name = "requester-updated-at", Skip = true)]
+        [ZenDeskSerialization(Name = "requester-updated-at", Skip = true)]
         public string RequesterUpdatedAt { get; set; }
 
-        [ZenDeskSerializeAs(Name = "ticket-type-id")]
+        [ZenDeskSerialization(Name = "ticket-type-id")]
         public int TicketTypeId { get; set; }
 
-        [ZenDeskSerializeAs(Name = "updated-at", Skip = true)]
+        [ZenDeskSerialization(Name = "updated-at", Skip = true)]
         public string UpdatedAt { get; set; }
 
-        [ZenDeskSerializeAs(Name = "via-id", Skip=true)]
+        [ZenDeskSerialization(Name = "via-id", Skip=true)]
         public int ViaId { get; set; }
 
-        [ZenDeskSerializeAs(Name="set-tags")]
+        [ZenDeskSerialization(Name="set-tags")]
         public string SetTags { get; set; }
 
-        [ZenDeskSerializeAs(Name = "current-tags")]
+        [ZenDeskSerialization(Name = "current-tags")]
         public string CurrentTags { get; set; }
 
-        [ZenDeskSerializeAs(Name = "score", Skip=true)]
+        [ZenDeskSerialization(Name = "score", Skip=true)]
         public int Score { get; set; }
 
-        [ZenDeskSerializeAs(Name = "comments")]
+        [ZenDeskSerialization(Name = "comments")]
         public List<Comment> Comments { get; set; }
 
-        [ZenDeskSerializeAs(Name = "ticket-field-entries")]
+        [ZenDeskSerialization(Name = "ticket-field-entries")]
         public List<TicketFieldEntry> TicketFieldEntries { get; set; }
 
         /// <summary>
         /// Note: This is only used for Creating tickets and this field is not returned for getting tickets
         /// </summary>
-        [ZenDeskSerializeAs(Name = "requester-name")]        
+        [ZenDeskSerialization(Name = "requester-name")]        
         public string RequesterName { get; set; }
 
         /// <summary>
         /// Note: This is only used for Creating tickets and this field is not returned for getting tickets
         /// </summary>
-        [ZenDeskSerializeAs(Name = "requester-email")]        
+        [ZenDeskSerialization(Name = "requester-email")]        
         public string RequesterEmail { get; set; }
 
         /// <summary>
         /// Note: This is only used for Updating tickets and this field is not returned for getting tickets
         /// </summary>
-        [ZenDeskSerializeAs(Name = "additional-tags")]        
+        [ZenDeskSerialization(Name = "additional-tags")]        
         public string AdditionalTags { get; set; }
     }
 
-    [ZenDeskSerializeAs(Name = "ticket-field-entry")]
+    [ZenDeskSerialization(Name = "ticket-field-entry")]
     public class TicketFieldEntry
     {
-        [ZenDeskSerializeAs(Name = "ticket-field-id")]
+        [ZenDeskSerialization(Name = "ticket-field-id")]
         public int TicketFieldId { get; set; }
 
-        [ZenDeskSerializeAs(Name = "value")]
+        [ZenDeskSerialization(Name = "value")]
         public string Value { get; set; }
     }
 

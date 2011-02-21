@@ -14,7 +14,7 @@ namespace ZenDeskApi
             var request = new ZenRestRequest
             {
                 Method = Method.GET,
-                Resource = "views.json",
+                Resource = "views.xml",
                 RootElement = "views"
             };
 

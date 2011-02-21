@@ -27,7 +27,7 @@ namespace ZenDeskApi
             var request = new ZenRestRequest
             {
                 Method = Method.GET,
-                Resource = string.Format("{0}/{1}.json", Users, id.ToString())
+                Resource = string.Format("{0}/{1}.xml", Users, id.ToString())
             };
 
             return Execute<User>(request);
@@ -138,9 +138,9 @@ namespace ZenDeskApi
             return res.StatusCode == System.Net.HttpStatusCode.OK;
         }
 
-        public List<UserIdentity> GetUserIdentities(int userId)
+        public List<UserEmailIdentity> GetUserIdentities(int userId)
         {
-            return GetCollection<UserIdentity>(string.Format("{0}/{1}/user_identities.json", Users, userId)); 
+            return GetCollection<UserEmailIdentity>(string.Format("{0}/{1}/user_identities.xml", Users, userId)); 
         }
 
 

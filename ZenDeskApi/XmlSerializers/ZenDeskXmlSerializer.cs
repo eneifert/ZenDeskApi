@@ -57,7 +57,7 @@ namespace ZenDeskApi.XmlSerializers
 			var t = obj.GetType();
 			var name = t.Name;
 
-			var options = t.GetAttribute<ZenDeskSerializeAsAttribute>();
+			var options = t.GetAttribute<ZenDeskSerializationAttribute>();
 			if (options != null) {
 				name = options.TransformName(options.Name ?? name);
 			}
@@ -84,7 +84,7 @@ namespace ZenDeskApi.XmlSerializers
 			var objType = obj.GetType();
 
 			var props = from p in objType.GetProperties()
-						let indexAttribute = p.GetAttribute<ZenDeskSerializeAsAttribute>()
+						let indexAttribute = p.GetAttribute<ZenDeskSerializationAttribute>()
 						where p.CanRead && p.CanWrite
 						orderby indexAttribute == null ? int.MaxValue : indexAttribute.Index
 						select p;
@@ -97,7 +97,7 @@ namespace ZenDeskApi.XmlSerializers
                     root.SetValue(obj); // set the node value to the object value
                 }
             } else {
-		        var globalOptions = objType.GetAttribute<ZenDeskSerializeAsAttribute>();
+		        var globalOptions = objType.GetAttribute<ZenDeskSerializationAttribute>();
 
 		        foreach (var prop in props) {
 		            var name = prop.Name;
@@ -111,13 +111,13 @@ namespace ZenDeskApi.XmlSerializers
 		            var propType = prop.PropertyType;
 
 		            var useAttribute = false;
-		            var settings = prop.GetAttribute<ZenDeskSerializeAsAttribute>();
+		            var settings = prop.GetAttribute<ZenDeskSerializationAttribute>();
 		            if (settings != null) {
 		                name = settings.Name.HasValue() ? settings.Name : name;
 		                useAttribute = settings.Attribute;
 		            }                  
 
-		            var options = prop.GetAttribute<ZenDeskSerializeAsAttribute>();                   
+		            var options = prop.GetAttribute<ZenDeskSerializationAttribute>();                   
 
 		            if (options != null) {
 
@@ -155,7 +155,7 @@ namespace ZenDeskApi.XmlSerializers
                             if (itemTypeName == "")
                             {
                                 Type itemType = item.GetType();
-                                var att = itemType.GetAttribute<ZenDeskSerializeAsAttribute>();
+                                var att = itemType.GetAttribute<ZenDeskSerializationAttribute>();
 
                                 if (att != null && att.Name != null)
                                     itemTypeName = att.Name;

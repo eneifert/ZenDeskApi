@@ -6,28 +6,28 @@ using ZenDeskApi.XmlSerializers;
 
 namespace ZenDeskApi.Model
 {
-    [ZenDeskSerializeAs(Name = "comment")]
+    [ZenDeskSerialization(Name = "comment")]
     public class Comment
     {
-        [ZenDeskSerializeAs(Name = "author-id")]
+        [ZenDeskSerialization(Name = "author-id")]
         public int AuthorId { get; set; }
 
-        [ZenDeskSerializeAs(Name = "created-at", Skip=true)]
+        [ZenDeskSerialization(Name = "created-at", Skip=true)]
         public string CreatedAt { get; set; }
 
-        [ZenDeskSerializeAs(Name = "is-public")]
+        [ZenDeskSerialization(Name = "is-public")]
         public bool IsPublic { get; set; }
 
-        [ZenDeskSerializeAs(Name = "type")]
+        [ZenDeskSerialization(Name = "type")]
         public string CommentType { get; set; }
 
-        [ZenDeskSerializeAs(Name = "value")]
+        [ZenDeskSerialization(Name = "value")]
         public string Value { get; set; }
 
-        [ZenDeskSerializeAs(Name = "via-id")]
+        [ZenDeskSerialization(Name = "via-id")]
         public int ViaId { get; set; }
 
-        [ZenDeskSerializeAs(Name = "attachments")]
+        [ZenDeskSerialization(Name = "attachments")]
         public List<Attachment> Attachments { get; set; }
 
     } 

@@ -25,12 +25,17 @@ namespace ZenDeskApi.XmlSerializers
 	/// When specified at the property level the class-level specification is overridden
 	/// </summary>
 	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Class, Inherited = false, AllowMultiple = false)]
-	public sealed class ZenDeskSerializeAsAttribute : Attribute
+	public sealed class ZenDeskSerializationAttribute : Attribute
 	{
-		public ZenDeskSerializeAsAttribute() {
+		public ZenDeskSerializationAttribute() {
 			NameStyle = NameStyle.AsIs;
 			Index = int.MaxValue;
 		}
+
+        /// <summary>
+        /// Some ZenDesk objects have alternate names like UserEmailIdentities is sometimes passed back as Records
+        /// </summary>
+        public string AlternateName { get; set; }
 
         /// <summary>
         /// Skips the element. Seems ZenDesk throws strange errors if you give them extra fields (even if the values are the same, like setting IsActive to true when it already is).

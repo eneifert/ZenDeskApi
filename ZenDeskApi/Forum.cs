@@ -22,7 +22,7 @@ namespace ZenDeskApi
             var request = new ZenRestRequest
             {
                 Method = Method.GET,
-                Resource = string.Format("{0}/{1}.json", _forums, id)
+                Resource = string.Format("{0}/{1}.xml", _forums, id)
             };
 
             return Execute<Forum>(request);

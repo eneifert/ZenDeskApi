@@ -7,28 +7,28 @@ using ZenDeskApi.XmlSerializers;
 namespace ZenDeskApi.Model
 {
 
-    [ZenDeskSerializeAs(Name = "forum")]
+    [ZenDeskSerialization(Name = "forum")]
     public class Forum
     {
-        [ZenDeskSerializeAs(Name = "id")]
+        [ZenDeskSerialization(Name = "id")]
         public int Id { get; set; }
 
-        [ZenDeskSerializeAs(Name = "name")]
+        [ZenDeskSerialization(Name = "name")]
         public string Name { get; set; }
 
-        [ZenDeskSerializeAs(Name = "description")]
+        [ZenDeskSerialization(Name = "description")]
         public string Description { get; set; }
 
-        [ZenDeskSerializeAs(Name = "entries-count")]
+        [ZenDeskSerialization(Name = "entries-count")]
         public int EntriesCount { get; set; }
 
-        [ZenDeskSerializeAs(Name = "posts-count", Skip=true)]
+        [ZenDeskSerialization(Name = "posts-count", Skip=true)]
         public int PostsCount { get; set; }
 
-        [ZenDeskSerializeAs(Name = "is-locked")]
+        [ZenDeskSerialization(Name = "is-locked")]
         public bool IsLocked { get; set; }
 
-        [ZenDeskSerializeAs(Name = "is-public", Skip=true)]
+        [ZenDeskSerialization(Name = "is-public", Skip=true)]
         public bool IsPublic { get; set; }
     }
 }

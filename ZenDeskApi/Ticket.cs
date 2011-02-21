@@ -24,7 +24,7 @@ namespace ZenDeskApi
             var request = new ZenRestRequest
             {
                 Method = Method.GET,
-                Resource = string.Format("{0}/{1}.json", Tickets, id)
+                Resource = string.Format("{0}/{1}.xml", Tickets, id)
             };
 
             return Execute<Ticket>(request);
@@ -60,7 +60,7 @@ namespace ZenDeskApi
             var request = new ZenRestRequest
             {
                 Method = Method.GET,
-                Resource = Requests + ".json",
+                Resource = Requests + ".xml",
             };
 
             //Assume the user
@@ -83,7 +83,7 @@ namespace ZenDeskApi
             var request = new ZenRestRequest
             {
                 Method = Method.GET,
-                Resource = string.Format("rules/{0}.json", viewId)
+                Resource = string.Format("rules/{0}.xml", viewId)
             };
 
             request.AddParameter("page", page.ToString());

@@ -18,7 +18,7 @@ namespace ZenDeskApi
             var request = new ZenRestRequest
             {
                 Method = Method.GET,
-                Resource = string.Format("forums/{0}/{1}.json", forumId, Entries)
+                Resource = string.Format("forums/{0}/{1}.xml", forumId, Entries)
             };
 
             return Execute<List<Entry>>(request);
@@ -29,7 +29,7 @@ namespace ZenDeskApi
             var request = new ZenRestRequest
             {
                 Method = Method.GET,
-                Resource = string.Format("{0}/{1}.json", Entries, id)
+                Resource = string.Format("{0}/{1}.xml", Entries, id)
             };
 
             return Execute<Entry>(request);

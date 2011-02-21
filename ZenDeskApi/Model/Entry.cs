@@ -7,52 +7,52 @@ using ZenDeskApi.XmlSerializers;
 namespace ZenDeskApi.Model
 {
 
-    [ZenDeskSerializeAs(Name = "entry")]
+    [ZenDeskSerialization(Name = "entry")]
     public class Entry
     {
-        [ZenDeskSerializeAs(Name = "id")]
+        [ZenDeskSerialization(Name = "id")]
         public int Id { get; set; }
 
-        [ZenDeskSerializeAs(Name = "forum_id")]
+        [ZenDeskSerialization(Name = "forum-id")]
         public int ForumId { get; set; }
 
-        [ZenDeskSerializeAs(Name = "title")]
+        [ZenDeskSerialization(Name = "title")]
         public string Title { get; set; }
 
-        [ZenDeskSerializeAs(Name = "body")]
+        [ZenDeskSerialization(Name = "body")]
         public string Body { get; set; }
 
-        [ZenDeskSerializeAs(Name = "created_at")]
+        [ZenDeskSerialization(Name = "created-at")]
         public string CreatedAt { get; set; }
 
-        [ZenDeskSerializeAs(Name = "updated_at")]
+        [ZenDeskSerialization(Name = "updated-at")]
         public string UpdatedAt { get; set; }
 
-        [ZenDeskSerializeAs(Name = "hits")]
+        [ZenDeskSerialization(Name = "hits")]
         public int Hits { get; set; }
 
-        [ZenDeskSerializeAs(Name = "posts_count")]
+        [ZenDeskSerialization(Name = "posts-count")]
         public int PostsCount { get; set; }
 
-        [ZenDeskSerializeAs(Name = "is_locked")]
+        [ZenDeskSerialization(Name = "is-locked")]
         public bool IsLocked { get; set; }
 
-        [ZenDeskSerializeAs(Name = "is_pinned")]
+        [ZenDeskSerialization(Name = "is-pinned")]
         public bool IsPinned { get; set; }
 
-        [ZenDeskSerializeAs(Name = "is_public")]
+        [ZenDeskSerialization(Name = "is-public")]
         public bool IsPublic { get; set; }
 
-        [ZenDeskSerializeAs(Name = "submitter_id")]
+        [ZenDeskSerialization(Name = "submitter-id")]
         public int SubmitterId { get; set; }
 
-        [ZenDeskSerializeAs(Name = "posts")]
+        [ZenDeskSerialization(Name = "posts")]
         public List<Post> Posts { get; set; }
 
         /// <summary>
         /// Used only on Post. Api does not return this on Get
         /// </summary>
-        [ZenDeskSerializeAs(Name = "current-tags")]
+        [ZenDeskSerialization(Name = "current-tags")]
         public string CurrentTags { get; set; }
     }
 }

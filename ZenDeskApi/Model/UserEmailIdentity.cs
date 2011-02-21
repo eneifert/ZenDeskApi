@@ -6,8 +6,9 @@ using RestSharp.Serializers;
 using ZenDeskApi.XmlSerializers;
 
 namespace ZenDeskApi.Model
-{    
-    public class UserIdentity
+{        
+    [ZenDeskSerialization(AlternateName="record")]
+    public class UserEmailIdentity
     {        
         public int AccountId { get; set; }        
         public string CreatedAt { get; set; }        

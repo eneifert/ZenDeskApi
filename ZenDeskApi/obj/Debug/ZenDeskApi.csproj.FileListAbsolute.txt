@@ -4,8 +4,8 @@ C:\Users\ericn\Documents\Visual Studio 2010\Projects\ZenDeskApi\ZenDeskApi\bin\D
 C:\Users\ericn\Documents\Visual Studio 2010\Projects\ZenDeskApi\ZenDeskApi\bin\Debug\RestSharp.dll
 C:\Users\ericn\Documents\Visual Studio 2010\Projects\ZenDeskApi\ZenDeskApi\bin\Debug\RestSharp.pdb
 C:\Users\ericn\Documents\Visual Studio 2010\Projects\ZenDeskApi\ZenDeskApi\bin\Debug\RestSharp.xml
+C:\Users\ericn\Documents\Visual Studio 2010\Projects\ZenDeskApi\Output\ZenDeskApi.dll
+C:\Users\ericn\Documents\Visual Studio 2010\Projects\ZenDeskApi\Output\ZenDeskApi.pdb
 C:\Users\ericn\Documents\Visual Studio 2010\Projects\ZenDeskApi\ZenDeskApi\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\ericn\Documents\Visual Studio 2010\Projects\ZenDeskApi\ZenDeskApi\obj\Debug\ZenDeskApi.dll
 C:\Users\ericn\Documents\Visual Studio 2010\Projects\ZenDeskApi\ZenDeskApi\obj\Debug\ZenDeskApi.pdb
-C:\Users\ericn\Documents\Visual Studio 2010\Projects\ZenDeskApi\Output\ZenDeskApi.dll
-C:\Users\ericn\Documents\Visual Studio 2010\Projects\ZenDeskApi\Output\ZenDeskApi.pdb

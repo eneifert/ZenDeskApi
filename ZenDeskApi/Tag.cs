@@ -53,7 +53,7 @@ namespace ZenDeskApi
             var request = new ZenRestRequest
             {
                 Method = Method.GET,
-                Resource = string.Format("{0}/{1}.json", Tags, tagName)
+                Resource = string.Format("{0}/{1}.xml", Tags, tagName)
             };
 
             request.AddParameter("page", page.ToString());

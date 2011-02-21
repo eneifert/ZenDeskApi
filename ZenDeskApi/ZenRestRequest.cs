@@ -13,7 +13,7 @@ namespace ZenDeskApi
         {
             RequestFormat = DataFormat.Xml;
             AddHeader("Content-Type", "application/xml");
-            XmlSerializer = new ZenDeskXmlSerializer();
+            XmlSerializer = new ZenDeskXmlSerializer();            
         }
     }
 }

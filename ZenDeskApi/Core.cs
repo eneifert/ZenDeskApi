@@ -9,6 +9,7 @@ using Newtonsoft.Json;
 using RestSharp;
 using RestSharp.Contrib;
 using ZenDeskApi.Model;
+using ZenDeskApi.XmlSerializers;
 
 
 namespace ZenDeskApi
@@ -27,14 +28,15 @@ namespace ZenDeskApi
         public ZenDeskApi(string yourZenDeskUrl, string user, string password)
         {                     
             _client = new RestClient(yourZenDeskUrl);
-            _client.Authenticator = new HttpBasicAuthenticator(user, password);            
-
+            _client.Authenticator = new HttpBasicAuthenticator(user, password);
+            _client.AddHandler("application/xml; charset=utf-8", new ZenDeskXmlDeserializer());
+            _client.AddHandler("application/xml", new ZenDeskXmlDeserializer());                        
         }
          
 
 		public T Execute<T>(ZenRestRequest request) where T : new()
 		{
-			var response = _client.Execute<T>(request);		    
+            var response = _client.Execute<T>(request);		    
 			return response.Data;
 		}
 
@@ -159,6 +161,33 @@ namespace ZenDeskApi
             }
 
             return id;
+        }
+
+        string RemoveAllXmlAttributes(string xml)
+        {
+
+
+            XmlDocument d = new XmlDocument();
+            d.LoadXml(xml);
+            d.DocumentElement.Attributes.RemoveAll();
+            ClearAllAttributes(d.DocumentElement.ChildNodes);
+
+            StringWriter sw = new StringWriter();
+            XmlTextWriter tx = new XmlTextWriter(sw);
+            d.WriteTo(tx);
+
+            return sw.ToString();
+        }
+        void ClearAllAttributes(XmlNodeList nodes)
+        {
+            foreach (XmlNode node in nodes)
+            {
+                if (node.Attributes != null)
+                    node.Attributes.RemoveAll();
+
+                if (node.HasChildNodes)
+                    ClearAllAttributes(node.ChildNodes);
+            }
         }
     }
 

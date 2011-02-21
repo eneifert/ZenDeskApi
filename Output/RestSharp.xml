@@ -104,14 +104,74 @@
             Representation of an HTTP cookie
             </summary>
         </member>
+        <member name="P:RestSharp.HttpCookie.Comment">
+            <summary>
+            Comment of the cookie
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpCookie.CommentUri">
+            <summary>
+            Comment of the cookie
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpCookie.Discard">
+            <summary>
+            Indicates whether the cookie should be discarded at the end of the session
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpCookie.Domain">
+            <summary>
+            Domain of the cookie
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpCookie.Expired">
+            <summary>
+            Indicates whether the cookie is expired
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpCookie.Expires">
+            <summary>
+            Date and time that the cookie expires
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpCookie.HttpOnly">
+            <summary>
+            Indicates that this cookie should only be accessed by the server
+            </summary>
+        </member>
         <member name="P:RestSharp.HttpCookie.Name">
             <summary>
-            Name of the parameter
+            Name of the cookie
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpCookie.Path">
+            <summary>
+            Path of the cookie
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpCookie.Port">
+            <summary>
+            Port of the cookie
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpCookie.Secure">
+            <summary>
+            Indicates that the cookie should only be sent over secure channels
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpCookie.TimeStamp">
+            <summary>
+            Date and time the cookie was created
             </summary>
         </member>
         <member name="P:RestSharp.HttpCookie.Value">
             <summary>
-            Value of the parameter
+            Value of the cookie
+            </summary>
+        </member>
+        <member name="P:RestSharp.HttpCookie.Version">
+            <summary>
+            Version of the cookie
             </summary>
         </member>
         <member name="T:RestSharp.RestClient">
@@ -318,26 +378,29 @@
             Passed on to underying WebRequest if set.
             </summary>
         </member>
-        <member name="M:RestSharp.IRestRequest.AddFile(System.String)">
+        <member name="M:RestSharp.IRestRequest.AddFile(System.String,System.String)">
             <summary>
             Adds a file to the Files collection to be included with a POST or PUT request 
             (other methods do not support file uploads).
             </summary>
+            <param name="name">The parameter name to use in the request</param>
             <param name="path">Full path to file to upload</param>
             <returns>This request</returns>
         </member>
-        <member name="M:RestSharp.IRestRequest.AddFile(System.Byte[],System.String)">
+        <member name="M:RestSharp.IRestRequest.AddFile(System.String,System.Byte[],System.String)">
             <summary>
             Adds the bytes to the Files collection with the specified file name
             </summary>
+            <param name="name">The parameter name to use in the request</param>
             <param name="bytes">The file data</param>
             <param name="fileName">The file name to use for the uploaded file</param>
             <returns>This request</returns>
         </member>
-        <member name="M:RestSharp.IRestRequest.AddFile(System.Byte[],System.String,System.String)">
+        <member name="M:RestSharp.IRestRequest.AddFile(System.String,System.Byte[],System.String,System.String)">
             <summary>
             Adds the bytes to the Files collection with the specified file name and content type
             </summary>
+            <param name="name">The parameter name to use in the request</param>
             <param name="bytes">The file data</param>
             <param name="fileName">The file name to use for the uploaded file</param>
             <param name="contentType">The MIME type of the file to upload</param>
@@ -1516,6 +1579,76 @@
             Content type for serialized content
             </summary>
         </member>
+        <member name="P:RestSharp.RestResponseCookie.Comment">
+            <summary>
+            Comment of the cookie
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestResponseCookie.CommentUri">
+            <summary>
+            Comment of the cookie
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestResponseCookie.Discard">
+            <summary>
+            Indicates whether the cookie should be discarded at the end of the session
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestResponseCookie.Domain">
+            <summary>
+            Domain of the cookie
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestResponseCookie.Expired">
+            <summary>
+            Indicates whether the cookie is expired
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestResponseCookie.Expires">
+            <summary>
+            Date and time that the cookie expires
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestResponseCookie.HttpOnly">
+            <summary>
+            Indicates that this cookie should only be accessed by the server
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestResponseCookie.Name">
+            <summary>
+            Name of the cookie
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestResponseCookie.Path">
+            <summary>
+            Path of the cookie
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestResponseCookie.Port">
+            <summary>
+            Port of the cookie
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestResponseCookie.Secure">
+            <summary>
+            Indicates that the cookie should only be sent over secure channels
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestResponseCookie.TimeStamp">
+            <summary>
+            Date and time the cookie was created
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestResponseCookie.Value">
+            <summary>
+            Value of the cookie
+            </summary>
+        </member>
+        <member name="P:RestSharp.RestResponseCookie.Version">
+            <summary>
+            Version of the cookie
+            </summary>
+        </member>
         <member name="T:RestSharp.RestRequest">
             <summary>
             Container for data used to make requests
@@ -1558,43 +1691,48 @@
             <param name="resource">Resource to use for this request</param>
             <param name="method">Method to use for this request</param>
         </member>
-        <member name="M:RestSharp.RestRequest.AddFile(System.String)">
+        <member name="M:RestSharp.RestRequest.AddFile(System.String,System.String)">
             <summary>
             Adds a file to the Files collection to be included with a POST or PUT request 
             (other methods do not support file uploads).
             </summary>
+            <param name="name">The parameter name to use in the request</param>
             <param name="path">Full path to file to upload</param>
             <returns>This request</returns>
         </member>
-        <member name="M:RestSharp.RestRequest.AddFile(System.Byte[],System.String)">
+        <member name="M:RestSharp.RestRequest.AddFile(System.String,System.Byte[],System.String)">
             <summary>
             Adds the bytes to the Files collection with the specified file name
             </summary>
+            <param name="name">The parameter name to use in the request</param>
             <param name="bytes">The file data</param>
             <param name="fileName">The file name to use for the uploaded file</param>
             <returns>This request</returns>
         </member>
-        <member name="M:RestSharp.RestRequest.AddFile(System.Byte[],System.String,System.String)">
+        <member name="M:RestSharp.RestRequest.AddFile(System.String,System.Byte[],System.String,System.String)">
             <summary>
             Adds the bytes to the Files collection with the specified file name and content type
             </summary>
+            <param name="name">The parameter name to use in the request</param>
             <param name="bytes">The file data</param>
             <param name="fileName">The file name to use for the uploaded file</param>
             <param name="contentType">The MIME type of the file to upload</param>
             <returns>This request</returns>
         </member>
-        <member name="M:RestSharp.RestRequest.AddFile(System.Action{System.IO.Stream},System.String)">
+        <member name="M:RestSharp.RestRequest.AddFile(System.String,System.Action{System.IO.Stream},System.String)">
             <summary>
             Adds the bytes to the Files collection with the specified file name and content type
             </summary>
+            <param name="name">The parameter name to use in the request</param>
             <param name="writer">A function that writes directly to the stream.  Should NOT close the stream.</param>
             <param name="fileName">The file name to use for the uploaded file</param>
             <returns>This request</returns>
         </member>
-        <member name="M:RestSharp.RestRequest.AddFile(System.Action{System.IO.Stream},System.String,System.String)">
+        <member name="M:RestSharp.RestRequest.AddFile(System.String,System.Action{System.IO.Stream},System.String,System.String)">
             <summary>
             Adds the bytes to the Files collection with the specified file name and content type
             </summary>
+            <param name="name">The parameter name to use in the request</param>
             <param name="writer">A function that writes directly to the stream.  Should NOT close the stream.</param>
             <param name="fileName">The file name to use for the uploaded file</param>
             <param name="contentType">The MIME type of the file to upload</param>
@@ -1811,6 +1949,11 @@
             MIME content type of file
             </summary>
         </member>
+        <member name="P:RestSharp.HttpFile.Name">
+            <summary>
+            Name of the parameter
+            </summary>
+        </member>
         <member name="T:RestSharp.NtlmAuthenticator">
             <summary>
             Tries to Authenticate with the credentials of the currently logged in user
@@ -1821,19 +1964,21 @@
             Container for files to be uploaded with requests
             </summary>
         </member>
-        <member name="M:RestSharp.FileParameter.Create(System.Byte[],System.String,System.String)">
+        <member name="M:RestSharp.FileParameter.Create(System.String,System.Byte[],System.String,System.String)">
             <summary>
              Creates a file parameter from an array of bytes.
             </summary>
+            <param name="name">The parameter name to use in the request.</param>
             <param name="data">The data to use as the file's contents.</param>
             <param name="filename">The filename to use in the request.</param>
             <param name="contentType">The content type to use in the request.</param>
             <returns>The <see cref="T:RestSharp.FileParameter"/></returns>
         </member>
-        <member name="M:RestSharp.FileParameter.Create(System.Byte[],System.String)">
+        <member name="M:RestSharp.FileParameter.Create(System.String,System.Byte[],System.String)">
             <summary>
              Creates a file parameter from an array of bytes.
             </summary>
+            <param name="name">The parameter name to use in the request.</param>
             <param name="data">The data to use as the file's contents.</param>
             <param name="filename">The filename to use in the request.</param>
             <returns>The <see cref="T:RestSharp.FileParameter"/> using the default content type.</returns>
@@ -1856,6 +2001,11 @@
         <member name="P:RestSharp.FileParameter.ContentType">
             <summary>
             MIME content type of file
+            </summary>
+        </member>
+        <member name="P:RestSharp.FileParameter.Name">
+            <summary>
+            Name of the parameter
             </summary>
         </member>
         <member name="T:RestSharp.Extensions.XmlExtensions">

@@ -6,34 +6,34 @@ using ZenDeskApi.XmlSerializers;
 
 namespace ZenDeskApi.Model
 {
-    [ZenDeskSerializeAs(Name = "post")]
+    [ZenDeskSerialization(Name = "post")]
     public class Post
     {
-        [ZenDeskSerializeAs(Name = "user-id")]
+        [ZenDeskSerialization(Name = "user-id")]
         public int UserId { get; set; }
         
-        [ZenDeskSerializeAs(Name = "created-at", Skip=true)]
+        [ZenDeskSerialization(Name = "created-at", Skip=true)]
         public string CreatedAt { get; set; }
         
-        [ZenDeskSerializeAs(Name = "updated-at", Skip=true)]
+        [ZenDeskSerialization(Name = "updated-at", Skip=true)]
         public string UpdatedAt { get; set; }
         
-        [ZenDeskSerializeAs(Name = "body")]
+        [ZenDeskSerialization(Name = "body")]
         public string Body { get; set; }
 
-        [ZenDeskSerializeAs(Name = "entry-id")]
+        [ZenDeskSerialization(Name = "entry-id")]
         public int EntryId { get; set; }
 
-        [ZenDeskSerializeAs(Name = "forum-id")]
+        [ZenDeskSerialization(Name = "forum-id")]
         public int ForumId { get; set; }
 
-        [ZenDeskSerializeAs(Name = "id")]
+        [ZenDeskSerialization(Name = "id")]
         public int Id { get; set; }
 
-        [ZenDeskSerializeAs(Name = "is-informative")]
+        [ZenDeskSerialization(Name = "is-informative")]
         public bool IsInformative { get; set; }
 
-        [ZenDeskSerializeAs(Name = "user", Skip=true)]
+        [ZenDeskSerialization(Name = "user", Skip=true)]
         public User User { get; set; }
     }
 }

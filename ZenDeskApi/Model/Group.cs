@@ -6,29 +6,29 @@ using ZenDeskApi.XmlSerializers;
 
 namespace ZenDeskApi.Model
 {
-    [ZenDeskSerializeAs(Name = "group")]
+    [ZenDeskSerialization(Name = "group")]
     public class Group
     {
 
-        [ZenDeskSerializeAs(Name = "name")]
+        [ZenDeskSerialization(Name = "name")]
         public string Name { get; set; }
 
-        [ZenDeskSerializeAs(Name = "id", Skip=true)]
+        [ZenDeskSerialization(Name = "id", Skip=true)]
         public int Id { get; set; }
 
-        [ZenDeskSerializeAs(Name = "is-active", Skip = true)]
+        [ZenDeskSerialization(Name = "is-active", Skip = true)]
         public bool IsActive { get; set; }
 
-        [ZenDeskSerializeAs(Name = "created-at", Skip = true)]
+        [ZenDeskSerialization(Name = "created-at", Skip = true)]
         public string CreatedAt { get; set; }
 
-        [ZenDeskSerializeAs(Name = "updated-at", Skip = true)]
+        [ZenDeskSerialization(Name = "updated-at", Skip = true)]
         public string UpdatedAt { get; set; }
 
-        [ZenDeskSerializeAs(Name = "users", Skip=true)]
+        [ZenDeskSerialization(Name = "users", Skip=true)]
         public List<User> Users { get; set; }
 
-        [ZenDeskSerializeAs(Name = "agents", ListItemName="agent")]
+        [ZenDeskSerialization(Name = "agents", ListItemName="agent")]
         public List<int> UserIds { get; set; }
 
         public void CopyUsersToUserIds()

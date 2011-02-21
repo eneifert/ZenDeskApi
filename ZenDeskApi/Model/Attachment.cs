@@ -6,31 +6,31 @@ using ZenDeskApi.XmlSerializers;
 
 namespace ZenDeskApi.Model
 {
-    [ZenDeskSerializeAs(Name = "attachment")]
+    [ZenDeskSerialization(Name = "attachment")]
     public class Attachment
     {
-        [ZenDeskSerializeAs(Name = "content-type")]
+        [ZenDeskSerialization(Name = "content-type")]
         public string ContentType { get; set; }
 
-        [ZenDeskSerializeAs(Name = "created-at", Skip=true)]
+        [ZenDeskSerialization(Name = "created-at", Skip=true)]
         public string CreatedAt { get; set; }
 
-        [ZenDeskSerializeAs(Name = "filename")]
+        [ZenDeskSerialization(Name = "filename")]
         public string FileName { get; set; }
 
-        [ZenDeskSerializeAs(Name = "id")]
+        [ZenDeskSerialization(Name = "id")]
         public int Id { get; set; }
 
-        [ZenDeskSerializeAs(Name = "is-public")]
+        [ZenDeskSerialization(Name = "is-public")]
         public bool IsPublic { get; set; }
 
-        [ZenDeskSerializeAs(Name = "size")]
+        [ZenDeskSerialization(Name = "size")]
         public int Size { get; set; }
 
-        [ZenDeskSerializeAs(Name = "token")]
+        [ZenDeskSerialization(Name = "token")]
         public string Token { get; set; }
 
-        [ZenDeskSerializeAs(Name = "url")]
+        [ZenDeskSerialization(Name = "url")]
         public string Url { get; set; }
     }
 }

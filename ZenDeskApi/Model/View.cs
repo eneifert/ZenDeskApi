@@ -2,19 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Xml.Serialization;
 
 namespace ZenDeskApi.Model
 {
     public class View
     {
-        public int Id { get; set; }
-        public bool IsActive { get; set; }
-        public int OwnerId { get; set; }
-        public string OwnerType { get; set; }
-        public int PerPage { get; set; }
-        public int Position { get; set; }
-        public string Title { get; set; }
-        public Output Output { get; set; }
+        public int Id { get; set; }         
+        public bool IsActive { get; set; }          
+        public int OwnerId { get; set; }          
+        public string OwnerType { get; set; }          
+        public int PerPage { get; set; }  
+        public int Position { get; set; }  
+        public string Title { get; set; }  
+        public Output Output { get; set; }  
     }
 
     public class Output
