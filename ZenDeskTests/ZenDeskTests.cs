@@ -15,228 +15,229 @@ namespace ZenDeskTests
                                                                    ZenDeskSettings.Password);
         #region Tests that modify an account are commented out
 
-        [Test]
-        public void CanCreateUpdateAndDestroyEntities()
-        {
-            int forumId = _api.GetForums().First().Id;
+        //[Test]
+        //public void CanCreateUpdateAndDestroyEntities()
+        //{
+        //    int forumId = _api.GetForums().First().Id;
 
-            int id = _api.CreateEntry(forumId, (int)_api.QueryUsers(ZenDeskSettings.Email).First().Id, "test entry", "entry body", "some tags");
+        //    int id = _api.CreateEntry(forumId, (int)_api.QueryUsers(ZenDeskSettings.Email).First().Id, "test entry", "entry body", "some tags");
 
-            Assert.Greater(id, 0);
+        //    Assert.Greater(id, 0);
 
-            var entry = _api.GetEntryById(id);
-            entry.Title = "new title";
+        //    var entry = _api.GetEntryById(id);
+        //    entry.Title = "new title";
 
-            Assert.True(_api.UpdateEntry(entry));
+        //    Assert.True(_api.UpdateEntry(entry));
 
-            var entry2 = _api.GetEntryById(id);
-            Assert.AreEqual(entry2.Title, entry.Title);
+        //    var entry2 = _api.GetEntryById(id);
+        //    Assert.AreEqual(entry2.Title, entry.Title);
 
-            Assert.True(_api.DestroyEntry(id));
-        }
+        //    Assert.True(_api.DestroyEntry(id));
+        //}
 
-        [Test]
-        public void CanCreateUpdateAndDestroyPosts()
-        {
-            int forumId = _api.GetForums().First().Id;
-            int entryId = _api.GetEntriesByForumId(forumId).First().Id;
-            int userId = (int)_api.FindUsersByEmail(ZenDeskSettings.Email).First().Id;
+        //[Test]
+        //public void CanCreateUpdateAndDestroyPosts()
+        //{
+        //    int forumId = _api.GetForums().First().Id;
+        //    int entryId = _api.GetEntriesByForumId(forumId).First().Id;
+        //    int userId = (int)_api.FindUsersByEmail(ZenDeskSettings.Email).First().Id;
 
-            int id = _api.CreatePost(entryId, userId, "some random post");
+        //    int id = _api.CreatePost(entryId, userId, "some random post");
 
-            Assert.Greater(id, 0);
+        //    Assert.Greater(id, 0);
 
-            //Update the post
-            var post = _api.GetPostByIds(entryId, id);
-            post.Body = "new body";
-            Assert.True(_api.UpdatePost(post));
+        //    //Update the post
+        //    var post = _api.GetPostByIds(entryId, id);
+        //    post.Body = "new body";
+        //    Assert.True(_api.UpdatePost(post));
 
-            var post2 = _api.GetPostByIds(entryId, id);
-            Assert.AreEqual(post.Body, post2.Body);
+        //    var post2 = _api.GetPostByIds(entryId, id);
+        //    Assert.AreEqual(post.Body, post2.Body);
 
-            Assert.True(_api.DestroyPost(id));
-        }
+        //    Assert.True(_api.DestroyPost(id));
+        //}
 
-        [Test]
-        public void CanCreateUpdateAndDestroyForum()
-        {
-            string name = "Test Forum";
-            string desc = "forum test";
+        //[Test]
+        //public void CanCreateUpdateAndDestroyForum()
+        //{
+        //    string name = "Test Forum";
+        //    string desc = "forum test";
 
-            int id = _api.CreateOrUpdateForum(name, desc, false);
+        //    int id = _api.CreateOrUpdateForum(name, desc, false);
 
-            Assert.Greater(id, 0);
+        //    Assert.Greater(id, 0);
 
-            var forum = _api.GetForumById(id);
-            forum.Name = "Changed Test Forum";
+        //    var forum = _api.GetForumById(id);
+        //    forum.Name = "Changed Test Forum";
 
-            Assert.Greater(_api.CreateOrUpdateForum(forum), 0);
+        //    Assert.Greater(_api.CreateOrUpdateForum(forum), 0);
 
-            Assert.AreEqual(_api.GetForumById(id).Name, forum.Name);
+        //    Assert.AreEqual(_api.GetForumById(id).Name, forum.Name);
 
-            Assert.True(_api.DestroyForum(id));
-        }
+        //    Assert.True(_api.DestroyForum(id));
+        //}
 
-        [Test]
-        public void CanApplyMacro()
-        {
-            int macroId = _api.GetMacros().Last().Id;
-            int ticketId = _api.GetTicketsForUserByPage(ZenDeskSettings.EndUserEmail).FirstOrDefault().NiceId;
+        //[Test]
+        //public void CanApplyMacro()
+        //{
+        //    int macroId = _api.GetMacros().Last().Id;
+        //    int ticketId = _api.GetTicketsForUserByPage(ZenDeskSettings.EndUserEmail).FirstOrDefault().NiceId;
 
-            Assert.True(_api.ApplyMacro(macroId, ticketId));
-        }
+        //    Assert.True(_api.ApplyMacro(macroId, ticketId));
+        //}
 
-        [Test]
-        public void CanCreateTicketWithRequester()
-        {
-            Assert.Greater(_api.CreateTicketWithRequester("test", TicketPriorities.Normal, "a name", ZenDeskSettings.EndUserEmail), 0);
-        }
+        //[Test]
+        //public void CanCreateTicketWithRequester()
+        //{
+        //    Assert.Greater(_api.CreateTicketWithRequester("test", TicketPriorities.Normal, "a name", ZenDeskSettings.EndUserEmail), 0);
+        //}
 
-        [Test]
-        public void CanCreateUpdateAndDestroyTicket()
-        {
+        //[Test]
+        //public void CanCreateUpdateAndDestroyTicket()
+        //{
 
-            int requesterId = (int)_api.FindUsersByEmail(ZenDeskSettings.EndUserEmail).First().Id;
-            int id = _api.CreateTicket("test", requesterId, TicketPriorities.Normal, "test");
-            Assert.Greater(id, 0);
+        //    int requesterId = (int)_api.FindUsersByEmail(ZenDeskSettings.EndUserEmail).First().Id;
+        //    int id = _api.CreateTicket("test", requesterId, TicketPriorities.Normal, "test");
+        //    Assert.Greater(id, 0);
 
-            ////It's not really clear how to test anyone else's ticket fields but mine so this is commented out.
-            //var t1 = _api.GetTicketById(id);
-            //t1.TicketFieldEntries.Add(new TicketFieldEntry { TicketFieldId = ZenDeskSettings.CustomFieldId, Value = "4323234" });
+        //    ////It's not really clear how to test anyone else's ticket fields but mine so this is commented out.
+        //    //var t1 = _api.GetTicketById(id);
+        //    //t1.TicketFieldEntries.Add(new TicketFieldEntry { TicketFieldId = ZenDeskSettings.CustomFieldId, Value = "4323234" });
 
-            //Assert.True(_api.UpdateTicket(t1));
+        //    //Assert.True(_api.UpdateTicket(t1));
 
-            Assert.True(_api.AddComment(id, new Comment { Value = "updated comment value" }));
-            var t2 = _api.GetTicketById(id);
 
-            Assert.AreEqual(t2.Comments.Last().Value, "updated comment value");
+        //    Assert.True(_api.AddComment(id, new Comment {Value = "updated public comment value", IsPublic = true}));
+        //    var t2 = _api.GetTicketById(id);
 
-            Assert.True(_api.DestroyTicket(id));
-        }
+        //    Assert.AreEqual(t2.Comments.Last().Value.Trim(), "updated public comment value");
 
-        [Test]
-        public void CanCreateATicketWithMoreFields()
-        {
-            var ticketFieldEntries = new List<TicketFieldEntry>();
-            ticketFieldEntries.Add(new TicketFieldEntry { TicketFieldId = ZenDeskSettings.CustomFieldId, Value = "555-555-5555" });
+        //    Assert.True(_api.DestroyTicket(id));
+        //}
 
-            //Create a new SR Ticket using ZenDesk
-            var ticket = new ZenDeskApi.Model.Ticket
-            {
-                RequesterEmail = "somenewemail@sample.com",
-                TicketFieldEntries = ticketFieldEntries,
-                Description = "Hello world \n this is a ticket!",
-                RequesterName = string.Format("{0} {1}", "John", "Smith"),
-                SetTags = "Colorodo",
-                Subject = "Promotion",
-                TicketTypeId = (int)TicketType.Question,
-            };
-            int resId = _api.CreateTicket(ticket);
+        //[Test]
+        //public void CanCreateATicketWithMoreFields()
+        //{
+        //    var ticketFieldEntries = new List<TicketFieldEntry>();
+        //    ticketFieldEntries.Add(new TicketFieldEntry { TicketFieldId = ZenDeskSettings.CustomFieldId, Value = "555-555-5555" });
 
-            Assert.Greater(resId, 0);
-        }
+        //    //Create a new SR Ticket using ZenDesk
+        //    var ticket = new ZenDeskApi.Model.Ticket
+        //    {
+        //        RequesterEmail = "somenewemail@sample.com",
+        //        TicketFieldEntries = ticketFieldEntries,
+        //        Description = "Hello world \n this is a ticket!",
+        //        RequesterName = string.Format("{0} {1}", "John", "Smith"),
+        //        SetTags = "Colorodo",
+        //        Subject = "Promotion",
+        //        TicketTypeId = (int)TicketType.Question,
+        //    };
+        //    int resId = _api.CreateTicket(ticket);
 
-        [Test]
-        public void CanCreateUpdateAndDestroyTicketAsEndUser()
-        {
-            int id = _api.CreateTicketAsEndUser(ZenDeskSettings.EndUserEmail, "I am testing", "still testing");
+        //    Assert.Greater(resId, 0);
+        //}
 
-            Assert.Greater(id, 0);
+        //[Test]
+        //public void CanCreateUpdateAndDestroyTicketAsEndUser()
+        //{
+        //    int id = _api.CreateTicketAsEndUser(ZenDeskSettings.EndUserEmail, "I am testing", "still testing");
 
-            string desc = "updated comment value";
-            Assert.True(_api.UpdateTicketAsEndUser(id, desc));
-            var tick = _api.GetTicketById(id);
+        //    Assert.Greater(id, 0);
 
-            Assert.AreEqual(tick.Comments.Last().Value, desc);
+        //    string desc = "updated comment value";
+        //    Assert.True(_api.UpdateTicketAsEndUser(id, desc));
+        //    var tick = _api.GetTicketById(id);
 
-            Assert.True(_api.DestroyRequest(id));
-        }
+        //    Assert.AreEqual(tick.Comments.Last().Value, desc);
 
-        [Test]
-        public void CanCreateUpdateAndDestroyGroup()
-        {
-            string name = "Test Api Group";
-            var gs = _api.GetGroups().First(x => x.Name == "Support");
+        //    Assert.True(_api.DestroyRequest(id));
+        //}
 
-            int id = _api.CreateOrUpdateGroup(name, gs.Users.Select(x => (int)x.Id).ToList());
-            Assert.Greater(id, 0);
+        //[Test]
+        //public void CanCreateUpdateAndDestroyGroup()
+        //{
+        //    string name = "Test Api Group";
+        //    var gs = _api.GetGroups().First(x => x.Name == "Support");
 
-            Group g = _api.GetGroupById(id);
-            g.Name = "Updated Test Api Group";
-            Assert.True(_api.UpdateGroup(g));
+        //    int id = _api.CreateOrUpdateGroup(name, gs.Users.Select(x => (int)x.Id).ToList());
+        //    Assert.Greater(id, 0);
 
-            Group g2 = _api.GetGroupById(id);
-            Assert.AreEqual(g2.Name, g.Name);
+        //    Group g = _api.GetGroupById(id);
+        //    g.Name = "Updated Test Api Group";
+        //    Assert.True(_api.UpdateGroup(g));
 
-            Assert.AreEqual(g2.Users.Count, gs.Users.Count);
-            Assert.True(_api.DestroyGroup(g.Id));
-        }
+        //    Group g2 = _api.GetGroupById(id);
+        //    Assert.AreEqual(g2.Name, g.Name);
 
-        [Test]
-        public void CanCreateUpdateAndDestroyOrganization()
-        {
-            string name = "Api Org";
-            string site = "www.google.com";
+        //    Assert.AreEqual(g2.Users.Count, gs.Users.Count);
+        //    Assert.True(_api.DestroyGroup(g.Id));
+        //}
 
-            Organization o = new Organization() { Name = name, Default = site };
-            int id = _api.CreateOrUpdateOrganization(o);
+        //[Test]
+        //public void CanCreateUpdateAndDestroyOrganization()
+        //{
+        //    string name = "Api Org";
+        //    string site = "www.google.com";
 
-            Assert.Greater(id, 0);
+        //    Organization o = new Organization() { Name = name, Default = site };
+        //    int id = _api.CreateOrUpdateOrganization(o);
 
-            var org = _api.GetOgranizationById(id);
-            org.Default = "www.yahoo.com";
-            _api.CreateOrUpdateOrganization(org);
+        //    Assert.Greater(id, 0);
 
-            Assert.AreEqual(_api.GetOgranizationById(id).Default, org.Default);
+        //    var org = _api.GetOgranizationById(id);
+        //    org.Default = "www.yahoo.com";
+        //    _api.CreateOrUpdateOrganization(org);
 
-            Assert.True(_api.DestroyOrganization(id));
-        }
+        //    Assert.AreEqual(_api.GetOgranizationById(id).Default, org.Default);
 
-        [Test]
-        public void CanCreateUpdateAndDestroyAUser()
-        {
-            string email = "tsdestestss@test.com";
+        //    Assert.True(_api.DestroyOrganization(id));
+        //}
 
-            int userID = _api.CreateOrUpdateUser(email, "some random name", "password", Role.EndUser,
-                                                 RestrictedTo.TicketsRequestedByUser, _api.GetAllGroupIDs());
-            Assert.Greater(userID, 0);
+        //[Test]
+        //public void CanCreateUpdateAndDestroyAUser()
+        //{
+        //    string email = "tsdestestss@test.com";
 
-            var u = _api.GetUserById(userID);
-            u.Phone = "342098329342908";
+        //    int userID = _api.CreateOrUpdateUser(email, "some random name", "password", Role.EndUser,
+        //                                         RestrictedTo.TicketsRequestedByUser, _api.GetAllGroupIDs());
+        //    Assert.Greater(userID, 0);
 
-            Assert.True(_api.UpdateUser(u));
-            var u2 = _api.GetUserById(userID);
-            Assert.AreEqual(u2.Phone, u.Phone);
+        //    var u = _api.GetUserById(userID);
+        //    u.Phone = "342098329342908";
 
-            Assert.True(_api.DestroyUser(userID));
-        }
+        //    Assert.True(_api.UpdateUser(u));
+        //    var u2 = _api.GetUserById(userID);
+        //    Assert.AreEqual(u2.Phone, u.Phone);
 
-        [Test]
-        public void CanAddEmailToUser()
-        {
-            Assert.True(_api.AddEmailAddressToAUser((int)_api.QueryUsers(ZenDeskSettings.EndUserEmail).First().Id,
-                                                    "fromapi@test.com"));
-        }
+        //    Assert.True(_api.DestroyUser(userID));
+        //}
 
-        [Test]
-        public void CanAddTwitterHandleToUser()
-        {
+        //[Test]
+        //public void CanAddEmailToUser()
+        //{
+        //    Assert.True(_api.AddEmailAddressToAUser((int)_api.QueryUsers(ZenDeskSettings.EndUserEmail).First().Id,
+        //                                            "fromapi@test.com"));
+        //}
 
-            string twit = "ss31232089_sample_twitter_handle";
-            int userId = (int)_api.QueryUsers(ZenDeskSettings.Email).First().Id;
+        //[Test]
+        //public void CanAddTwitterHandleToUser()
+        //{
 
-            try
-            {
-                _api.AddTwitterHandleToUser(userId, twit);
-            }
-            catch (ZenDeskNotAcceptableInputException e)
-            {
-                Assert.AreEqual(e.Message, string.Format("Twitter handle '{0}' does not exist.", twit));
-            }
+        //    string twit = "ss31232089_sample_twitter_handle";
+        //    int userId = (int)_api.QueryUsers(ZenDeskSettings.Email).First().Id;
 
-            Assert.True(_api.AddTwitterHandleToUser(userId, ZenDeskSettings.TwitterName));
+        //    try
+        //    {
+        //        _api.AddTwitterHandleToUser(userId, twit);
+        //    }
+        //    catch (ZenDeskNotAcceptableInputException e)
+        //    {
+        //        Assert.AreEqual(e.Message, string.Format("Twitter handle '{0}' does not exist.", twit));
+        //    }
 
-        }
+        //    Assert.True(_api.AddTwitterHandleToUser(userId, ZenDeskSettings.TwitterName));
+
+        //}
         #endregion
   
         [Test]
@@ -308,7 +309,7 @@ namespace ZenDeskTests
         [Test]
         public void CanGetAllTicketsInAView()
         {
-            View v = _api.GetViewByName("My unsolved tickets");
+            View v = _api.GetViewByName(ZenDeskSettings.ViewName);
             List<Ticket> ts = _api.GetAllTicketsInView(v.Id);
 
             Assert.Greater(ts.Count, 0);

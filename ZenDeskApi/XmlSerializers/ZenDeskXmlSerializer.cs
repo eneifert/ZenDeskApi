@@ -139,7 +139,11 @@ namespace ZenDeskApi.XmlSerializers
 		                    continue;
 		                }
 
-		                element.Value = value;
+                        //ZenDesk can't handle uppercase bools
+                        if (propType == typeof(bool) || propType == typeof(bool?))
+                            element.Value = value.ToLower();
+                        else
+		                    element.Value = value;
 
 		            }
                     else if (rawValue is IList)
