@@ -5,7 +5,6 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Xml;
-using Newtonsoft.Json;
 using RestSharp;
 using RestSharp.Contrib;
 using ZenDeskApi.Model;

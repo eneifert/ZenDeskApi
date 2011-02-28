@@ -13,39 +13,33 @@
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:User.cs" caret="4264" fromTop="23" />
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:EntriesAndPosts.cs" caret="589" fromTop="22" />
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:View.cs" caret="472" fromTop="19" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Ticket.cs" caret="2799" fromTop="23" />
       <File id="d:Miscellaneous Files/f:RestClient.Sync.cs/l:C!?Users?ericn?Documents?Visual Studio 2010?Projects?RestSharp?RestSharp?RestClient.Sync.cs" caret="2053" fromTop="25" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:XmlSerializers/f:ZenDeskXmlSerializer.cs" caret="1781" fromTop="24" />
       <File id="d:Miscellaneous Files/f:RestClient.cs/l:C!?Users?ericn?Documents?Visual Studio 2010?Projects?RestSharp?RestSharp?RestClient.cs" caret="8281" fromTop="39" />
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:Entry.cs" caret="745" fromTop="17" />
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:Attachment.cs" caret="0" fromTop="0" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:Comment.cs" caret="0" fromTop="0" />
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:Forum.cs" caret="0" fromTop="0" />
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:Group.cs" caret="0" fromTop="0" />
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:Macro.cs" caret="0" fromTop="0" />
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:Organization.cs" caret="0" fromTop="0" />
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:Post.cs" caret="0" fromTop="0" />
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:Tag.cs" caret="0" fromTop="0" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:Ticket.cs" caret="714" fromTop="0" />
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:TicketField.cs" caret="716" fromTop="19" />
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:UserEmailIdentity.cs" caret="348" fromTop="11" />
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:User.cs" caret="0" fromTop="0" />
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:XmlSerializers/f:ZendDeskSerializationAttribute.cs" caret="1291" fromTop="0" />
-      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskSettings.cs" caret="494" fromTop="13" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Core.cs" caret="1186" fromTop="0" />
-      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="10338" fromTop="27" />
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:View.cs" caret="260" fromTop="10" />
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:XmlSerializers/f:ZenDeskXmlDeserializer.cs" caret="4060" fromTop="36" />
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:XmlSerializers/f:ZenDeskXmlExtensions.cs" caret="534" fromTop="16" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:Ticket.cs" caret="714" fromTop="0" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:Comment.cs" caret="540" fromTop="17" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Core.cs" caret="1270" fromTop="20" />
+      <File id="d:Miscellaneous Files/f:RestRequest.cs/l:C!?Users?ericn?Documents?Visual Studio 2010?Projects?RestSharp?RestSharp?RestRequest.cs" caret="7979" fromTop="21" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Ticket.cs" caret="6920" fromTop="34" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="8787" fromTop="15" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskSettings.cs" caret="489" fromTop="13" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:XmlSerializers/f:ZenDeskXmlSerializer.cs" caret="1684" fromTop="17" />
     </RecentFiles>
     <RecentEdits>
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:XmlSerializers/f:ZenDeskXmlDeserializer.cs" caret="9546" fromTop="15" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:XmlSerializers/f:ZenDeskXmlDeserializer.cs" caret="9546" fromTop="16" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:XmlSerializers/f:ZenDeskXmlDeserializer.cs" caret="9546" fromTop="23" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:XmlSerializers/f:ZenDeskXmlDeserializer.cs" caret="9546" fromTop="28" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:XmlSerializers/f:ZenDeskXmlDeserializer.cs" caret="12545" fromTop="36" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:XmlSerializers/f:ZenDeskXmlDeserializer.cs" caret="13696" fromTop="46" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:XmlSerializers/f:ZenDeskXmlDeserializer.cs" caret="13208" fromTop="21" />
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:XmlSerializers/f:ZenDeskXmlDeserializer.cs" caret="12781" fromTop="12" />
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:XmlSerializers/f:ZenDeskXmlDeserializer.cs" caret="13715" fromTop="38" />
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:XmlSerializers/f:ZenDeskXmlExtensions.cs" caret="608" fromTop="18" />
@@ -53,7 +47,6 @@
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:XmlSerializers/f:ZenDeskXmlDeserializer.cs" caret="13258" fromTop="25" />
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:XmlSerializers/f:ZenDeskXmlDeserializer.cs" caret="13415" fromTop="30" />
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:XmlSerializers/f:ZenDeskXmlDeserializer.cs" caret="13572" fromTop="35" />
-      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="8399" fromTop="46" />
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:XmlSerializers/f:ZenDeskXmlDeserializer.cs" caret="13682" fromTop="29" />
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:XmlSerializers/f:ZenDeskXmlDeserializer.cs" caret="13680" fromTop="31" />
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:XmlSerializers/f:ZenDeskXmlDeserializer.cs" caret="1717" fromTop="17" />
@@ -68,7 +61,15 @@
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:XmlSerializers/f:ZendDeskSerializationAttribute.cs" caret="1316" fromTop="12" />
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:View.cs" caret="223" fromTop="9" />
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:XmlSerializers/f:ZenDeskXmlExtensions.cs" caret="880" fromTop="15" />
-      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskSettings.cs" caret="444" fromTop="12" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskSettings.cs" caret="552" fromTop="14" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="10638" fromTop="25" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:Model/f:Comment.cs" caret="517" fromTop="17" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:XmlSerializers/f:ZenDeskXmlSerializer.cs" caret="4733" fromTop="34" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:XmlSerializers/f:ZenDeskXmlSerializer.cs" caret="4533" fromTop="31" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="8181" fromTop="40" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="8763" fromTop="46" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskSettings.cs" caret="168" fromTop="8" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskSettings.cs" caret="552" fromTop="14" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
