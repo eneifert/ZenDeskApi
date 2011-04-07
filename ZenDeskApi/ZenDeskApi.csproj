@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attachment.cs" />
     <Compile Include="Macro.cs" />
     <Compile Include="Model\Attachment.cs" />
     <Compile Include="Model\Comment.cs" />

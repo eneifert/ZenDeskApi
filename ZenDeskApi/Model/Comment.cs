@@ -27,6 +27,9 @@ namespace ZenDeskApi.Model
         [ZenDeskSerialization(Name = "via-id")]
         public int ViaId { get; set; }
 
+        [ZenDeskSerialization(Name = "uploads")]
+        public string AttachmentsToken { get; set; }
+
         [ZenDeskSerialization(Name = "attachments")]
         public List<Attachment> Attachments { get; set; }
 

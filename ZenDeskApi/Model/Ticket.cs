@@ -98,6 +98,10 @@ namespace ZenDeskApi.Model
         /// </summary>
         [ZenDeskSerialization(Name = "additional-tags")]        
         public string AdditionalTags { get; set; }
+
+        [ZenDeskSerialization(Name = "uploads")]
+        public string AttachmentsToken { get; set; }
+
     }
 
     [ZenDeskSerialization(Name = "ticket-field-entry")]

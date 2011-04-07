@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using NUnit.Framework;
@@ -107,7 +108,7 @@ namespace ZenDeskTests
         //    //Assert.True(_api.UpdateTicket(t1));
 
 
-        //    Assert.True(_api.AddComment(id, new Comment {Value = "updated public comment value", IsPublic = true}));
+        //    Assert.True(_api.AddComment(id, new Comment { Value = "updated public comment value", IsPublic = true }));
         //    var t2 = _api.GetTicketById(id);
 
         //    Assert.AreEqual(t2.Comments.Last().Value.Trim(), "updated public comment value");
