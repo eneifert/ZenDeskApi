@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json.Net35">
+      <HintPath>..\lib\Newtonsoft.Json.Net35.dll</HintPath>
+    </Reference>
     <Reference Include="RestSharp, Version=100.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\RestSharp.dll</HintPath>
