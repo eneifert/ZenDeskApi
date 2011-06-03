@@ -17,7 +17,6 @@
 using System;
 using System.Collections;
 using System.Linq;
-using System.Reflection;
 using System.Xml.Linq;
 using RestSharp.Extensions;
 using RestSharp.Serializers;
@@ -52,6 +51,7 @@ namespace ZenDeskApi.XmlSerializers
 		/// <param name="obj">Object to serialize</param>
 		/// <returns>XML as string</returns>
 		public string Serialize(object obj) {
+ 
 			var doc = new XDocument();
 
 			var t = obj.GetType();

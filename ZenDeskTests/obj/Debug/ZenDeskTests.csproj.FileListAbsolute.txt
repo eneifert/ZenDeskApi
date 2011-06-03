@@ -3,7 +3,6 @@ C:\Users\ericn\Documents\Visual Studio 2010\Projects\ZenDeskApi\ZenDeskTests\bin
 C:\Users\ericn\Documents\Visual Studio 2010\Projects\ZenDeskApi\ZenDeskTests\bin\Debug\nunit.framework.dll
 C:\Users\ericn\Documents\Visual Studio 2010\Projects\ZenDeskApi\ZenDeskTests\bin\Debug\ZenDeskApi.dll
 C:\Users\ericn\Documents\Visual Studio 2010\Projects\ZenDeskApi\ZenDeskTests\bin\Debug\RestSharp.dll
-C:\Users\ericn\Documents\Visual Studio 2010\Projects\ZenDeskApi\ZenDeskTests\bin\Debug\Newtonsoft.Json.Net35.dll
 C:\Users\ericn\Documents\Visual Studio 2010\Projects\ZenDeskApi\ZenDeskTests\bin\Debug\ZenDeskApi.pdb
 C:\Users\ericn\Documents\Visual Studio 2010\Projects\ZenDeskApi\ZenDeskTests\bin\Debug\nunit.framework.xml
 C:\Users\ericn\Documents\Visual Studio 2010\Projects\ZenDeskApi\ZenDeskTests\bin\Debug\RestSharp.pdb
@@ -11,3 +10,4 @@ C:\Users\ericn\Documents\Visual Studio 2010\Projects\ZenDeskApi\ZenDeskTests\bin
 C:\Users\ericn\Documents\Visual Studio 2010\Projects\ZenDeskApi\ZenDeskTests\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\ericn\Documents\Visual Studio 2010\Projects\ZenDeskApi\ZenDeskTests\obj\Debug\ZenDeskTests.dll
 C:\Users\ericn\Documents\Visual Studio 2010\Projects\ZenDeskApi\ZenDeskTests\obj\Debug\ZenDeskTests.pdb
+C:\Users\ericn\Documents\Visual Studio 2010\Projects\ZenDeskApi\ZenDeskTests\bin\Debug\Newtonsoft.Json.Net35.dll

@@ -17,6 +17,9 @@ namespace ZenDeskApi
     {
         private const string  XOnBehalfOfEmail = "X-On-Behalf-Of";
         private RestClient _client;
+        private string _user;
+        private string _password;
+        private string _zenDeskUrl;
 
         /// <summary>
         /// Constructor that uses BasicHttpAuthentication.
@@ -25,7 +28,11 @@ namespace ZenDeskApi
         /// <param name="user"></param>
         /// <param name="password"></param>
         public ZenDeskApi(string yourZenDeskUrl, string user, string password)
-        {                     
+        {
+            _user = user;
+            _password = password;
+            _zenDeskUrl = yourZenDeskUrl;
+
             _client = new RestClient(yourZenDeskUrl);
             _client.Authenticator = new HttpBasicAuthenticator(user, password);
             _client.AddHandler("application/xml; charset=utf-8", new ZenDeskXmlDeserializer());

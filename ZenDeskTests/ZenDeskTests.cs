@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Mime;
 using System.Text;
 using NUnit.Framework;
 using ZenDeskApi;
@@ -93,28 +94,28 @@ namespace ZenDeskTests
         //    Assert.Greater(_api.CreateTicketWithRequester("test", TicketPriorities.Normal, "a name", ZenDeskSettings.EndUserEmail), 0);
         //}
 
-        //[Test]
-        //public void CanCreateUpdateAndDestroyTicket()
-        //{
+        [Test]
+        public void CanCreateUpdateAndDestroyTicket()
+        {
 
-        //    int requesterId = (int)_api.FindUsersByEmail(ZenDeskSettings.EndUserEmail).First().Id;
-        //    int id = _api.CreateTicket("test", requesterId, TicketPriorities.Normal, "test");
-        //    Assert.Greater(id, 0);
+            // int requesterId = (int)_api.FindUsersByEmail(ZenDeskSettings.EndUserEmail).First().Id;
+            // int id = _api.CreateTicket("test", requesterId, TicketPriorities.Normal, "test");
+            // Assert.Greater(id, 0);
 
-        //    ////It's not really clear how to test anyone else's ticket fields but mine so this is commented out.
-        //    //var t1 = _api.GetTicketById(id);
-        //    //t1.TicketFieldEntries.Add(new TicketFieldEntry { TicketFieldId = ZenDeskSettings.CustomFieldId, Value = "4323234" });
+            // ////It's not really clear how to test anyone else's ticket fields but mine so this is commented out.
+            // //var t1 = _api.GetTicketById(id);
+            // //t1.TicketFieldEntries.Add(new TicketFieldEntry { TicketFieldId = ZenDeskSettings.CustomFieldId, Value = "4323234" });
 
-        //    //Assert.True(_api.UpdateTicket(t1));
+            // //Assert.True(_api.UpdateTicket(t1));
 
 
-        //    Assert.True(_api.AddComment(id, new Comment { Value = "updated public comment value", IsPublic = true }));
-        //    var t2 = _api.GetTicketById(id);
+            // Assert.True(_api.AddComment(id, new Comment { Value = "updated public comment value", IsPublic = true }));
+            // var t2 = _api.GetTicketById(id);
 
-        //    Assert.AreEqual(t2.Comments.Last().Value.Trim(), "updated public comment value");
+            // Assert.AreEqual(t2.Comments.Last().Value.Trim(), "updated public comment value");
 
-        //    Assert.True(_api.DestroyTicket(id));
-        //}
+            // Assert.True(_api.DestroyTicket(id));
+        }
 
         //[Test]
         //public void CanCreateATicketWithMoreFields()
