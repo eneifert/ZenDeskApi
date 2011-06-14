@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net.Mime;
 using System.Text;
 using NUnit.Framework;
+using RestSharp;
 using ZenDeskApi;
 using ZenDeskApi.Model;
 
@@ -357,8 +358,22 @@ namespace ZenDeskTests
 
         [Test]
         public void CanGetMacros()
-        {
+        {            
             Assert.Greater(_api.GetMacros().Count, 0);
-        }       
+        }
+       
+        [Test]
+        public void MyTest()
+        {                                    
+            var request = new ZenRestRequest
+            {
+                Method = Method.GET,
+                Resource = "posts.rss"
+            };
+
+            var res = _api.Execute(request);
+
+
+        }
     }
 }
