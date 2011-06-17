@@ -125,6 +125,9 @@ namespace ZenDeskApi
         /// <returns></returns>
         public List<T> GetCollection<T>(string resource, string rootElement="")
         {
+            if (!resource.EndsWith(".xml"))
+                resource += ".xml";
+
             var request = new ZenRestRequest
             {
                 Method = Method.GET,

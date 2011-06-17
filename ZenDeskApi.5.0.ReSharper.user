@@ -33,10 +33,10 @@
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:XmlSerializers/f:ZenDeskXmlSerializer.cs" caret="795" fromTop="6" />
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Attachment.cs" caret="2289" fromTop="27" />
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Ticket.cs" caret="6557" fromTop="22" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Core.cs" caret="849" fromTop="16" />
-      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskSettings.cs" caret="196" fromTop="8" />
       <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="12137" fromTop="37" />
-      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Forum.cs" caret="548" fromTop="22" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Forum.cs" caret="551" fromTop="22" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskSettings.cs" caret="562" fromTop="14" />
+      <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Core.cs" caret="1329" fromTop="25" />
     </RecentFiles>
     <RecentEdits>
       <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="4210" fromTop="31" />
@@ -64,11 +64,11 @@
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:XmlSerializers/f:ZenDeskXmlSerializer.cs" caret="1600" fromTop="31" />
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/d:XmlSerializers/f:ZenDeskXmlSerializer.cs" caret="712" fromTop="3" />
       <File id="4F440DDF-8B14-4B30-981F-CA4A3D9A80AA/f:Attachment.cs" caret="105" fromTop="3" />
-      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskSettings.cs" caret="1119" fromTop="14" />
-      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskSettings.cs" caret="701" fromTop="15" />
       <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="12205" fromTop="38" />
-      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskSettings.cs" caret="456" fromTop="12" />
       <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskTests.cs" caret="11986" fromTop="30" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskSettings.cs" caret="953" fromTop="14" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskSettings.cs" caret="593" fromTop="9" />
+      <File id="2B27217E-7D59-4305-B267-395399ABA741/f:ZenDeskSettings.cs" caret="160" fromTop="8" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>

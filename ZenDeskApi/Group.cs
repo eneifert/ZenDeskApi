@@ -13,7 +13,7 @@ namespace ZenDeskApi
 
         public List<Group> GetGroups()
         {
-            return GetCollection<Group>(Groups);
+            return GetCollection<Group>(Groups + ".xml");
         }
 
         public Group GetGroupById(int id)

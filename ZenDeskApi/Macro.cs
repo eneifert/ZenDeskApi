@@ -13,7 +13,7 @@ namespace ZenDeskApi
 
         public List<Macro> GetMacros()
         {
-            return GetCollection<Macro>(Macros);
+            return GetCollection<Macro>(Macros + ".xml");
         }
 
         public bool ApplyMacro(int macroId, int ticketId)

@@ -14,7 +14,7 @@ namespace ZenDeskApi
 
         public List<Forum> GetForums()
         {
-            return GetCollection<Forum>(_forums);
+            return GetCollection<Forum>(_forums + ".xml");
         }
 
         public Forum GetForumById(int id)
