@@ -1,3 +1,6 @@
+*Updated 6/17/2011: This project in now in Nuget! (Also it seems the Zendesk is now sometimes returning json instead of xml so these bugs have been fixed).
+	- Also did some improvements on attachements.
+
 *Updated 2/16/2011: Fixed bug changed the TicketStatus to TicketStatusID.
 
 This is a full c# wrapper for the ZenDesk Api at: http://www.zendesk.com/api/rest-introduction.
