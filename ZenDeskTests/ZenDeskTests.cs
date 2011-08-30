@@ -278,6 +278,8 @@ namespace ZenDeskTests
         [Test]
         public void CanGetOrganizations()
         {
+            var orgs2 = _api.GetOgranizationById(471690);
+
             var orgs = _api.GetOgranizations();
             Assert.Greater(orgs.Count, 0);
 
@@ -304,7 +306,7 @@ namespace ZenDeskTests
         [Test]
         public void CanGetTicketsForUser()
         {
-            List<Ticket> ts = _api.GetAllTicketsForUser(ZenDeskSettings.EndUserEmail);
+            List<Ticket> ts = _api.GetAllTicketsForUser(ZenDeskSettings.EndUserEmail, 3);
 
             Assert.Greater(ts.Count, 0);
         }

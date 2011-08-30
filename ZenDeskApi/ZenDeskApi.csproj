@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attachment.cs" />
+    <Compile Include="JsonSerializers\ZenDeskJsonDeserializer.cs" />
     <Compile Include="Macro.cs" />
     <Compile Include="Model\Attachment.cs" />
     <Compile Include="Model\Comment.cs" />

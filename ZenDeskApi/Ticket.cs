@@ -30,7 +30,7 @@ namespace ZenDeskApi
             return Execute<Ticket>(request);
         }
 
-        public List<Ticket> GetAllTicketsForUser(string email)
+        public List<Ticket> GetAllTicketsForUser(string email, int maxPages=25)
         {
             var tickets = new List<Ticket>();
 
@@ -40,7 +40,7 @@ namespace ZenDeskApi
                 var ticks = new List<Ticket>();
 
                 //Try getting the tickets for all of the pages
-                while (page == 1 || ticks.Count > 0)
+                while ((page == 1 || ticks.Count > 0) && page < maxPages)
                 {
                     ticks = GetTicketsForUserByPage(email, page);
                     tickets.AddRange(ticks);

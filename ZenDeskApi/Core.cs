@@ -7,6 +7,7 @@ using System.Text;
 using System.Xml;
 using RestSharp;
 using RestSharp.Contrib;
+using ZenDeskApi.JsonSerializers;
 using ZenDeskApi.Model;
 using ZenDeskApi.XmlSerializers;
 
@@ -36,7 +37,9 @@ namespace ZenDeskApi
             _client = new RestClient(yourZenDeskUrl);
             _client.Authenticator = new HttpBasicAuthenticator(user, password);
             _client.AddHandler("application/xml; charset=utf-8", new ZenDeskXmlDeserializer());
-            _client.AddHandler("application/xml", new ZenDeskXmlDeserializer());                        
+            _client.AddHandler("application/xml", new ZenDeskXmlDeserializer());
+            _client.AddHandler("application/json; charset=utf-8", new ZenDeskJsonDeserializer());
+            _client.AddHandler("application/json", new ZenDeskJsonDeserializer());                        
         }
          
 
@@ -66,7 +69,7 @@ namespace ZenDeskApi
         {
             string url = string.Format("{0}/access/remote/", httpsUrl);
 
-            string timestamp = GetUnixEpoch(DateTime.Now.AddDays(1)).ToString();
+            string timestamp = GetUnixEpoch(DateTime.Now).ToString();
 
             string message = name + email + authToken + timestamp;
             string hash = Md5(message);
