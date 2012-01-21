@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ZenDeskApi.XmlSerializers;
 
 namespace ZenDeskApi.Model
 {
+    [ZenDeskSerialization(AlternateName = "record")]
     public class TicketField
     {
         public int AccountId { get; set; }
