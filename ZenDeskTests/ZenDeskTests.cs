@@ -350,7 +350,7 @@ namespace ZenDeskTests
 
             var forum = _api.GetForumById(forums.First().Id);
             Assert.Greater(forum.Id, 0);
-        }
+        }        
 
         [Test]
         public void CanGetTicketFields()
