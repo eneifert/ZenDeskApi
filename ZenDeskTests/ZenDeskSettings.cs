@@ -12,7 +12,7 @@ namespace ZenDeskTests
         public const string EndUserEmail = "todo";
         public const string Password = "todo";
         public const string TwitterName = "todo";
-        public const int CustomFieldId = todo;
+        public const int CustomFieldId = 0;
         public const string ViewName = "My unsolved tickets";
     }
 }
