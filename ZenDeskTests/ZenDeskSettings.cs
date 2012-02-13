@@ -7,12 +7,12 @@ namespace ZenDeskTests
 {
     public class ZenDeskSettings
     {
-        public const string Site = "http://ritterim.zendesk.com";
-        public const string Email = "tech@ritterim.com";
-        public const string EndUserEmail = "craigr@ritterim.com";
-        public const string Password = "S8nSZojabEvrjro";
-        public const string TwitterName = "twitter";
-        public const int CustomFieldId = 481028;
+        public const string Site = "todo";
+        public const string Email = "todo";
+        public const string EndUserEmail = "todo";
+        public const string Password = "todo";
+        public const string TwitterName = "todo";
+        public const int CustomFieldId = todo;
         public const string ViewName = "My unsolved tickets";
     }
 }
