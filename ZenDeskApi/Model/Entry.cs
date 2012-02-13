@@ -49,6 +49,9 @@ namespace ZenDeskApi.Model
         [ZenDeskSerialization(Name = "posts")]
         public List<Post> Posts { get; set; }
 
+        [ZenDeskSerialization(Name = "votes-count")]
+        public int VotesCount { get; set; }
+
         /// <summary>
         /// Used only on Post. Api does not return this on Get
         /// </summary>
